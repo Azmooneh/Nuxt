@@ -1,7 +1,7 @@
 <template>
     <nav
         class="sticky top-0 start-0 end-0 bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700">
-        <div class="max-w-screen-xl mx-auto flex flex-wrap justify-between items-center">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
                 <button @click.prevent="toggleSidebar"
                         class="p-2 ltr:mr-2 rtl:ml-2 rtl:rotate-180 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -67,7 +67,7 @@
                 </button>
 
                 <button type="button" class="hidden sm:flex py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">قیمت روز خودرو</button>
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200"> ثبت آگهی </button>
+                <NuxtLink to="/add" class="text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200"> ثبت آگهی </NuxtLink>
             </div>
         </div>
     </nav>

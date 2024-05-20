@@ -1,6 +1,13 @@
 @import url('../fonts/icons.css');
 
 @tailwind base;
+
+@layer base {
+    * {
+        @apply transition-all duration-300;
+    }
+}
+
 @tailwind components;
 
 /* Font IRANYekanX */
