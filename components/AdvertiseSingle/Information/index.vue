@@ -1,5 +1,5 @@
 <template>
-    <section class="font-iran order-2 md:order-1">
+    <section class="font-iran order-2 md:order-1 cursor-default">
         <!-- title & publish date -->
         <div class="border-b border-b-gray-200 dark:border-b-gray-700 pb-2">
             <h1 class="text-gray-900 dark:text-white text-2xl font-normal mb-2"> {{totalInfo.title}} </h1>
@@ -24,16 +24,16 @@
             </div>
         </div>
         <!-- specifications -->
-        <ul class="list-none mb-4">
+        <ul class="list-none mb-4 text-gray-900 dark:text-white text-base font-normal lg:leading-7">
             <li v-for="item in spec" class="flex items-start justify-between gap-4 border-b border-b-gray-200 dark:border-b-gray-700 py-2">
-                <p class="text-gray-900 dark:text-white text-base font-normal"> {{ item.title }} </p>
-                <p class="text-gray-900 dark:text-white text-base font-normal"> {{ item.spec }} </p>
+                <p class=""> {{ item.title }} </p>
+                <p class=""> {{ item.spec }} </p>
             </li>
         </ul>
         <!-- description -->
         <div class="text-gray-900 dark:text-white">
-            <p class="text-lg font-semibold mb-1"> توضیحات </p>
-            <p class="text-sm font-medium leading-7"> فروش فوری تحویل سی روزه
+            <p class="text-lg font-semibold mb-1 lg:mb-2"> توضیحات </p>
+            <p class="text-sm lg:text-base lg:leading-8 font-medium leading-7"> فروش فوری تحویل سی روزه
                 امیکو تک باری شاستی خالی ۳۹۰۰۰
                 با اتاق ۴۱۰۰ موتور ۴۰۰ پر قدرت ترین تک باری
                 احمدی ، </p>
@@ -42,14 +42,14 @@
 </template>
 
 <script>
-import {usePayeYekAdvertiseSingle} from "~/store/index.js";
+import {useAdvertiseSingle} from "~/store/Advertise/index.js";
 import {getHoursPast, numberWithCommas} from "~/helpers/index.js";
 
 export default {
     name: 'Information',
     setup(){
-        const adSingleStore = usePayeYekAdvertiseSingle();
-        const totalInfo = ref(computed(() => adSingleStore.information));
+        const advertiseStore = useAdvertiseSingle();
+        const totalInfo = ref(computed(() => advertiseStore.information));
         const spec = ref([]);
 
         console.log(totalInfo.value);
@@ -61,8 +61,6 @@ export default {
             };
             spec.value.push(obj);
         }
-
-        // console.log(totalInfo.value)
 
         return {
             totalInfo,

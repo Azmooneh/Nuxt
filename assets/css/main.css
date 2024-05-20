@@ -1,3 +1,5 @@
+@import url('../fonts/icons.css');
+
 @tailwind base;
 @tailwind components;
 
@@ -104,4 +106,16 @@
 
 body{
     direction: rtl;
+}
+
+.custom-slider-mobile-arrows .swiper .swiper-button-prev, .custom-slider-mobile-arrows .swiper .swiper-button-next {
+    @apply after:font-icomoon after:text-[#fff] after:text-2xl size-8 rounded bg-gray-900/20 dark:bg-white/20 shadow-md;
+}
+
+.custom-slider-mobile-arrows .swiper .swiper-button-prev {
+    @apply  after:content-['\e903'];
+}
+
+.custom-slider-mobile-arrows .swiper .swiper-button-next{
+    @apply after:content-['\e901'];
 }

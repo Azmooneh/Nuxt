@@ -46,63 +46,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-ic_baseline-share:before {
-    content: "\e911";
-}
-.icon-chevron-Down1:before {
-    content: "\e912";
-}
-.icon-chevron-up1:before {
-    content: "\e913";
-}
-.icon-mage_phone:before {
-    content: "\e914";
-}
-.icon-chevron-Down:before {
-    content: "\e90d";
-}
-.icon-chevron-up:before {
-    content: "\e90e";
-}
-.icon-phone:before {
-    content: "\e90c";
-}
-.icon-marker-location:before {
-    content: "\e90b";
-}
-.icon-arrow-left .path1:before {
+.icon-ep_arrow-left:before {
     content: "\e900";
-    color: rgb(0, 0, 0);
 }
-.icon-arrow-left .path2:before {
+.icon-ep_arrow-left-bold:before {
     content: "\e901";
-    margin-left: -1em;
-    color: rgb(0, 0, 0);
 }
-.icon-bars-3:before {
+.icon-ep_arrow-right:before {
     content: "\e902";
 }
-.icon-chat:before {
+.icon-ep_arrow-right-bold:before {
     content: "\e903";
-}
-.icon-check:before {
-    content: "\e904";
-}
-.icon-chevron-LEFT:before {
-    content: "\e905";
-}
-.icon-chevron-right:before {
-    content: "\e906";
-}
-.icon-i-mark:before {
-    content: "\e907";
-}
-.icon-search-01:before {
-    content: "\e908";
-}
-.icon-share:before {
-    content: "\e909";
-}
-.icon-x-mark:before {
-    content: "\e90a";
 }

@@ -39,23 +39,4 @@ export const useHomePage = defineStore('HomePage', {
     },
 })
 
-export const usePayeYekAdvertiseSingle = defineStore('PayeYekAdvertiseSingle', {
-    state: () => {
-        return {
-            primaryImage: null,
-            thumbnailImages: null,
-            sliderCompact: null,
-            information: null,
-        }
-    },
-    actions: {
-        saveGallery(image, images, gallery){
-            this.primaryImage = image;
-            this.thumbnailImages = images;
-            this.sliderCompact = gallery;
-        },
-        saveInformation(info){
-            this.information = info;
-        }
-    },
-})
+
