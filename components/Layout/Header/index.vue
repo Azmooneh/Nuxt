@@ -1,52 +1,54 @@
 <template>
     <nav
-        class="sticky top-0 start-0 end-0 bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700">
+        class="sticky top-0 start-0 end-0 bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 z-[2]">
         <div class="container mx-auto flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
-                <button @click.prevent="toggleSidebar"
-                        class="p-2 ltr:mr-2 rtl:ml-2 rtl:rotate-180 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <svg
-                        aria-hidden="true"
-                        :class="{'hidden': openSidebar}"
-                        class="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"
-                        ></path>
-                    </svg>
-                    <svg
-                        aria-hidden="true"
-                        :class="{'hidden': !openSidebar}"
-                        class="w-6 h-6"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                        ></path>
-                    </svg>
-                    <span class="sr-only">Toggle sidebar</span>
-                </button>
+                <!--                <button @click.prevent="toggleSidebar"-->
+                <!--                        class="p-2 ltr:mr-2 rtl:ml-2 rtl:rotate-180 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">-->
+                <!--                    <svg-->
+                <!--                        aria-hidden="true"-->
+                <!--                        :class="{'hidden': openSidebar}"-->
+                <!--                        class="w-6 h-6"-->
+                <!--                        fill="currentColor"-->
+                <!--                        viewBox="0 0 20 20"-->
+                <!--                        xmlns="http://www.w3.org/2000/svg"-->
+                <!--                    >-->
+                <!--                        <path-->
+                <!--                            fill-rule="evenodd"-->
+                <!--                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"-->
+                <!--                            clip-rule="evenodd"-->
+                <!--                        ></path>-->
+                <!--                    </svg>-->
+                <!--                    <svg-->
+                <!--                        aria-hidden="true"-->
+                <!--                        :class="{'hidden': !openSidebar}"-->
+                <!--                        class="w-6 h-6"-->
+                <!--                        fill="currentColor"-->
+                <!--                        viewBox="0 0 20 20"-->
+                <!--                        xmlns="http://www.w3.org/2000/svg"-->
+                <!--                    >-->
+                <!--                        <path-->
+                <!--                            fill-rule="evenodd"-->
+                <!--                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"-->
+                <!--                            clip-rule="evenodd"-->
+                <!--                        ></path>-->
+                <!--                    </svg>-->
+                <!--                    <span class="sr-only">Toggle sidebar</span>-->
+                <!--                </button>-->
+                <NuxtLink to="/">
+                    <img
+                        src="https://paye1.com/storage/media/land/files/zpYWsElFaU9L8QBd0pNKXTHPSncR59ljC0NSaXJ4.svg"
+                        class="ltr:mr-3 rtl:ml-3 h-7 hidden dark:flex"
+                        alt="Logo"
+                    />
 
-                <img
-                    src="https://paye1.com/storage/media/land/files/zpYWsElFaU9L8QBd0pNKXTHPSncR59ljC0NSaXJ4.svg"
-                    class="ltr:mr-3 rtl:ml-3 h-7 hidden dark:flex"
-                    alt="Logo"
-                />
+                    <img
+                        src="https://paye1.com/storage/media/land/files/Z84oxhbvEB5EVqczASQgAyIeyuO8X8MFArFe5NUq.svg"
+                        class="ltr:mr-3 rtl:ml-3 h-7 dark:hidden"
+                        alt="Logo"
+                    />
 
-                <img
-                    src="https://paye1.com/storage/media/land/files/Z84oxhbvEB5EVqczASQgAyIeyuO8X8MFArFe5NUq.svg"
-                    class="ltr:mr-3 rtl:ml-3 h-7 dark:hidden"
-                    alt="Logo"
-                />
+                </NuxtLink>
 
             </div>
             <div class="flex items-center lg:order-2 gap-1">
@@ -66,19 +68,25 @@
 
                 </button>
 
-                <button type="button" class="hidden sm:flex py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">قیمت روز خودرو</button>
-                <NuxtLink to="/add" class="text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200"> ثبت آگهی </NuxtLink>
+                <NuxtLink to="/price"
+                          class="hidden sm:flex py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    قیمت روز خودرو
+                </NuxtLink>
+                <NuxtLink to="/add"
+                          class="text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200">
+                    ثبت آگهی
+                </NuxtLink>
             </div>
         </div>
     </nav>
 </template>
 
 <script>
-import { useCommon } from '~/store/index.js';
+import {useCommon} from '~/store/index.js';
 
 export default {
     name: 'Header',
-    setup(){
+    setup() {
         const commonStore = useCommon();
         const openSidebar = ref(computed(() => commonStore.openSidebar));
         const toggleDarkmode = () => {

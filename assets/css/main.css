@@ -101,6 +101,12 @@
 
 }
 
+@layer components {
+    .flex_center{
+        @apply flex items-center justify-center;
+    }
+}
+
 @tailwind utilities;
 
 @layer utilities {
@@ -125,4 +131,8 @@ body{
 
 .custom-slider-mobile-arrows .swiper .swiper-button-next{
     @apply after:content-['\e901'];
+}
+
+.min_h_screen{
+    @apply min-h-[calc(100vh-61px)];
 }

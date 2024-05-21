@@ -25,8 +25,9 @@
         </div>
         <!-- specifications -->
         <ul class="list-none mb-4 text-gray-900 dark:text-white text-base font-normal lg:leading-7">
+            <Phone :phone="phone" />
             <li v-for="item in spec" class="flex items-start justify-between gap-4 border-b border-b-gray-200 dark:border-b-gray-700 py-2">
-                <p class=""> {{ item.title }} </p>
+                <p class="flex-none"> {{ item.title }} </p>
                 <p class=""> {{ item.spec }} </p>
             </li>
         </ul>
@@ -44,9 +45,25 @@
 <script>
 import {useAdvertiseSingle} from "~/store/Advertise/index.js";
 import {getHoursPast, numberWithCommas} from "~/helpers/index.js";
+import Phone from "~/components/AdvertiseSingle/Information/Children/Phone/index.vue";
+
+const staticSpecs = {
+    fuel_ype: "نوع سوخت",
+    engine_condition: "وضعیت موتور",
+    chassis_condition: "وضعیت شاسی",
+    body_condition: "وضعیت بدنه",
+    third_party_insurance_date: "تاریخ بیمه شخص ثالث",
+    gearbox_type: "نوع گیربکس",
+    usage: "نوع کاربری",
+    car_condition: "وضعیت خودرو",
+    // communication_mobile: "تلفن تماس",
+}
 
 export default {
     name: 'Information',
+    components: {
+        Phone,
+    },
     setup(){
         const advertiseStore = useAdvertiseSingle();
         const totalInfo = ref(computed(() => advertiseStore.information));
@@ -54,12 +71,22 @@ export default {
 
         console.log(totalInfo.value);
 
-        for (const [key, value] of Object.entries(totalInfo.value.specifications)) {
-            const obj = {
-                title: key,
-                spec: value,
-            };
-            spec.value.push(obj);
+        // for (const [key, value] of Object.entries(totalInfo.value)) {
+        //     const obj = {
+        //         title: key,
+        //         spec: value,
+        //     };
+        //     spec.value.push(obj);
+        // }
+
+        for (const key in totalInfo.value) {
+            if (staticSpecs.hasOwnProperty(key)) {
+                const obj = {
+                    title: staticSpecs[key],
+                    spec: totalInfo.value[key],
+                }
+                spec.value.push(obj);
+            }
         }
 
         return {
@@ -67,6 +94,7 @@ export default {
             getHoursPast,
             numberWithCommas,
             spec,
+            phone: totalInfo.value.communication_mobile,
         }
     }
 }
