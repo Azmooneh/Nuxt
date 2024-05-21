@@ -12,11 +12,15 @@
                     <!-- name -->
                     <div class="flex flex-col gap-1 flex-1">
                         <h3 class="text-sm md:text-base font-medium line-clamp-1"> {{ item.product_name }} </h3>
-                        <p class="text-sm font-normal"> مدل: &nbsp;<span class="font-medium"> {{ item.production_year }} </span> </p>
+                        <p class="text-sm font-normal"> مدل: &nbsp;
+                            <span class="font-medium" v-if="item.production_year"> {{ item.production_year }} </span>
+                            <span class="font-medium" v-else> ---- </span>
+                        </p>
                     </div>
                     <!-- price -->
                     <div class="flex flex-col items-end sm:flex-row sm:gap-8 md:gap-12 gap-1 flex-none">
-                        <h3 class="text-sm sm:text-base font-medium line-clamp-1"> {{ numberWithCommas(item.price) }} <span class="hidden sm:inline-block text-sm"> تومان </span> </h3>
+                        <h3 class="text-sm sm:text-base font-medium line-clamp-1" v-if="item.price"> {{ numberWithCommas(item.price) }} <span class="hidden sm:inline-block text-sm"> تومان </span> </h3>
+                        <h3 class="text-sm sm:text-base font-medium line-clamp-1" v-else> ناموجود </h3>
                         <p class="text-xs leading-5 sm:text-sm md:text-base font-normal"> تاریخ: &nbsp;<span class="font-medium"> {{ renderCurrentDate(item.updated_at) }} </span> </p>
                     </div>
                 </li>
