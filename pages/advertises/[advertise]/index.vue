@@ -33,7 +33,7 @@
             </main>
 
             <!-- related advertises -->
-            <RelatedAdvertises />
+            <!-- <RelatedAdvertises />-->
         </section>
     </section>
 </template>

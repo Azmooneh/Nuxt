@@ -19,7 +19,7 @@
                     </div>
                     <!-- price -->
                     <div class="flex flex-col items-end sm:flex-row sm:gap-8 md:gap-12 gap-1 flex-none">
-                        <h3 class="text-sm sm:text-base font-medium line-clamp-1" v-if="item.price"> {{ numberWithCommas(item.price) }} <span class="hidden sm:inline-block text-sm"> تومان </span> </h3>
+                        <h3 class="text-sm sm:text-base font-medium line-clamp-1" v-if="item.price != 0"> {{ numberWithCommas(item.price) }} <span class="hidden sm:inline-block text-sm"> تومان </span> </h3>
                         <h3 class="text-sm sm:text-base font-medium line-clamp-1" v-else> ناموجود </h3>
                         <p class="text-xs leading-5 sm:text-sm md:text-base font-normal"> تاریخ: &nbsp;<span class="font-medium"> {{ renderCurrentDate(item.updated_at) }} </span> </p>
                     </div>
