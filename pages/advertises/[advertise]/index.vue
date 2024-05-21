@@ -81,7 +81,7 @@ export default {
             }
         }
 
-        loadAdvertiseData(1);
+        loadAdvertiseData(advertise.value);
 
         watch(() => loading.value, (n, o) => {
             watchLoading.value = n;

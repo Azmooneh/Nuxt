@@ -28,7 +28,7 @@
                 <div class="flex flex-row-reverse justify-between items-center ">
                     <div
                         class="text-xs md:text-sm inline-flex items-center font-medium text-primary-600 dark:text-primary-500">
-                        <span v-if="ad.agreement"> {{ numberWithCommas(ad.price) }} تومان </span>
+                        <span v-if="ad.agreement == 0"> {{ numberWithCommas(ad.price) }} تومان </span>
                         <span v-else> توافقی </span>
                     </div>
                     <span

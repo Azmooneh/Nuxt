@@ -2,7 +2,7 @@
     <section class="font-iran order-2 md:order-1 cursor-default">
         <!-- title & publish date -->
         <div class="border-b border-b-gray-200 dark:border-b-gray-700 pb-2">
-            <h1 class="text-gray-900 dark:text-white text-2xl font-normal mb-2"> {{totalInfo.title}} </h1>
+            <h1 class="text-gray-900 dark:text-white text-2xl leading-9 font-normal mb-2"> {{totalInfo.title}} </h1>
             <!--            <span class="text-sm line-clamp-1 text-gray-900 dark:text-gray-300"> {{getHoursPast()}} </span>-->
         </div>
         <!-- triple data -->
@@ -20,7 +20,8 @@
             <!-- price -->
             <div class="flex flex-col h-24 px-1 flex-1 items-center justify-start pt-7 gap-1">
                 <p class="text-xs font-light"> قیمت </p>
-                <h3 class="text-sm font-medium"> {{ numberWithCommas(totalInfo.price) }} <span class="text-xs"> تومان </span> </h3>
+                <h3 class="text-sm font-medium" v-if="totalInfo.price != 0"> {{ numberWithCommas(totalInfo.price) }} <span class="text-xs"> تومان </span></h3>
+                <h3 class="text-sm font-medium" v-else> ناموجود </h3>
             </div>
         </div>
         <!-- specifications -->
@@ -34,10 +35,7 @@
         <!-- description -->
         <div class="text-gray-900 dark:text-white">
             <p class="text-lg font-semibold mb-1 lg:mb-2"> توضیحات </p>
-            <p class="text-sm lg:text-base lg:leading-8 font-medium leading-7"> فروش فوری تحویل سی روزه
-                امیکو تک باری شاستی خالی ۳۹۰۰۰
-                با اتاق ۴۱۰۰ موتور ۴۰۰ پر قدرت ترین تک باری
-                احمدی ، </p>
+            <p class="text-sm lg:text-base lg:leading-8 font-medium leading-7"> {{ totalInfo.description }} </p>
         </div>
     </section>
 </template>
@@ -69,18 +67,10 @@ export default {
         const totalInfo = ref(computed(() => advertiseStore.information));
         const spec = ref([]);
 
-        // console.log(totalInfo.value);
-
-        // for (const [key, value] of Object.entries(totalInfo.value)) {
-        //     const obj = {
-        //         title: key,
-        //         spec: value,
-        //     };
-        //     spec.value.push(obj);
-        // }
+        // console.log(totalInfo.value)
 
         for (const key in totalInfo.value) {
-            if (staticSpecs.hasOwnProperty(key)) {
+            if (staticSpecs.hasOwnProperty(key) && totalInfo.value[key] != null) {
                 const obj = {
                     title: staticSpecs[key],
                     spec: totalInfo.value[key],
