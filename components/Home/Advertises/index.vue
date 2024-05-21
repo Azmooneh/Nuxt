@@ -1,28 +1,28 @@
 <template>
-    <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <section class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         <NuxtLink v-for="(ad, index) in advertises" :key="index" :to="'/advertises/' + ad.id"
-                  class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md dark:bg-gray-800 dark:border-gray-700 transition-all duration-300">
-            <div class="w-full md:w-36 lg:w-40 md:flex-none">
-                <div class="relative w-full pt-[75%] md:pt-[100%]">
+                  class="flex flex-row bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md dark:bg-gray-800 dark:border-gray-700 transition-all duration-300">
+            <div class="w-48 sm:w-72 md:w-36 lg:w-44 xl:w-40 md:flex-none">
+                <div class="relative w-full pt-[100%]">
                     <img class="object-cover size-full absolute top-0 right-0"
                          :src="ad.primary_image"
                          alt="" draggable="false"/>
                 </div>
             </div>
             <div
-                class="w-full p-4 flex flex-col justify-around md:justify-between space-y-5 md:space-y-0 md:py-2">
-                <div class="flex items-start gap-4 justify-between md:flex-col md:justify-start md:gap-0">
-                    <h2 class="mb-2 line-clamp-2 text-sm md:text-base lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
+                class="w-full p-2 sm:p-4 flex flex-col justify-between space-y-5 md:space-y-0 md:py-2">
+                <div class="flex items-start gap-2 justify-between flex-col md:justify-start md:gap-2">
+                    <h2 class="line-clamp-1 xs:line-clamp-2 text-sm leading-6 sm:text-base sm:leading-7 md:text-sm md:leading-6 lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                     </h2>
                     <span
                         class="text-nowrap bg-primary-100 text-primary-800 text-[0.7rem] font-medium inline-flex items-center px-1.5 py-0.5 rounded dark:bg-primary-200/75 dark:text-primary-800"> {{ ad.province
-                        }} - {{ ad.city }} </span>
+                        }} ، {{ ad.city }} </span>
                 </div>
 
                 <div class="flex flex-row-reverse justify-between items-center ">
                     <div
-                        class="text-xs md:text-sm inline-flex items-center font-medium text-primary-600 dark:text-primary-500">
+                        class="text-xs xs:text-sm md:text-xs lg:text-sm inline-flex items-center font-medium text-primary-600 dark:text-primary-500">
                         <span v-if="ad.agreement == 0"> {{ numberWithCommas(ad.price) }} تومان </span>
                         <span v-else> توافقی </span>
                     </div>
