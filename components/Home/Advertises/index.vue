@@ -12,7 +12,7 @@
             <div
                 class="w-full p-2 sm:p-4 flex flex-col justify-between space-y-5 md:space-y-0 md:py-2">
                 <div class="flex items-start gap-2 justify-between flex-col md:justify-start md:gap-2">
-                    <h2 class="line-clamp-1 xs:line-clamp-2 text-sm leading-6 sm:text-base sm:leading-7 md:text-sm md:leading-6 lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
+                    <h2 class="line-clamp-1 tracking-wide xs:line-clamp-2 text-sm leading-6 sm:text-base sm:leading-7 md:text-sm md:leading-6 lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                     </h2>
                     <span
