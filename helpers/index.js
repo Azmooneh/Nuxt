@@ -22,6 +22,10 @@ export const getHoursPast = (publishTime) => {
     }
 }
 
-export const renderCurrentDate = () => {
-    return new Intl.DateTimeFormat('fa-IR', { dateStyle: 'medium' }).format(new Date())
+export const renderCurrentDate = (string) => {
+    if(string){
+        return new Intl.DateTimeFormat('fa-IR', { dateStyle: 'medium' }).format(new Date(string))
+    } else {
+        return new Intl.DateTimeFormat('fa-IR', { dateStyle: 'medium' }).format(new Date())
+    }
 }
