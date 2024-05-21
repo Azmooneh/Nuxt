@@ -12,17 +12,12 @@
             <div
                 class="w-full p-4 flex flex-col justify-around md:justify-between space-y-5 md:space-y-0 md:py-2">
                 <div class="flex items-start gap-4 justify-between md:flex-col md:justify-start md:gap-0">
-                    <h2 class="mb-2 line-clamp-2 text-sm md:text-base lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-bold font-iran tracking-tight text-gray-900 dark:text-white">
+                    <h2 class="mb-2 line-clamp-2 text-sm md:text-base lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                     </h2>
-                    <div class="flex items-center gap-1">
                     <span
                         class="text-nowrap bg-primary-100 text-primary-800 text-[0.7rem] font-medium inline-flex items-center px-1.5 py-0.5 rounded dark:bg-primary-200/75 dark:text-primary-800"> {{ ad.province
-                        }} </span>
-                        <span
-                            class="text-nowrap bg-primary-100 text-primary-800 text-[0.7rem] font-medium inline-flex items-center px-1.5 py-0.5 rounded dark:bg-primary-200/75 dark:text-primary-800"> {{ ad.city
-                            }} </span>
-                    </div>
+                        }} - {{ ad.city }} </span>
                 </div>
 
                 <div class="flex flex-row-reverse justify-between items-center ">
