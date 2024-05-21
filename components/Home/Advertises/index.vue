@@ -2,17 +2,17 @@
     <section class="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
         <NuxtLink v-for="(ad, index) in advertises" :key="index" :to="'/advertises/' + ad.id"
                   class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md dark:bg-gray-800 dark:border-gray-700 transition-all duration-300">
-            <div class="w-full md:w-36 lg:w-48 xl:w-40 md:flex-none">
+            <div class="w-full md:w-36 lg:w-40 md:flex-none">
                 <div class="relative w-full pt-[75%] md:pt-[100%]">
                     <img class="object-cover size-full absolute top-0 right-0"
-                         :src="`${useRuntimeConfig().public.imageUrl}/storage/` + ad.primary_image"
+                         :src="ad.primary_image"
                          alt="" draggable="false"/>
                 </div>
             </div>
             <div
                 class="w-full p-4 flex flex-col justify-around md:justify-between space-y-5 md:space-y-0 md:py-2">
                 <div class="flex items-start gap-4 justify-between md:flex-col md:justify-start md:gap-0">
-                    <h2 class="mb-2 line-clamp-2 text-sm md:text-base font-bold font-iran tracking-tight text-gray-900 dark:text-white">
+                    <h2 class="mb-2 line-clamp-2 text-sm md:text-base lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-bold font-iran tracking-tight text-gray-900 dark:text-white">
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                     </h2>
                     <div class="flex items-center gap-1">
@@ -49,6 +49,7 @@ export default {
     setup() {
         const homePageStore = useHomePage();
         const advertises = ref(computed(() => homePageStore.advertises));
+        console.log(advertises.value)
 
 
         return {

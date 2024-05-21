@@ -63,7 +63,7 @@ export default {
 
         const loadAdvertiseData = async (filter) => {
             const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/${filter}`);
-            console.log(response.data.value.data);
+            // console.log(response.data.value.data);
             if (response.data.value.status == 200) {
                 try {
                     loading.value = true;

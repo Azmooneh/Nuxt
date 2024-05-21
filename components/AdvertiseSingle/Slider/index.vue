@@ -4,14 +4,14 @@
             <Swiper :navigation="true" :speed="750" class="mb-4" :modules="mainModules">
                 <SwiperSlide v-for="slide in gallery">
                     <div class="relative pt-[100%] md:pt-[75%] w-full" @click="toggleSliderModalStatus(true)">
-                        <img class="object-cover absolute w-full h-full rounded top-0 left-0" :src="`${useRuntimeConfig().public.imageUrl}/storage/` + slide" alt="slide" />
+                        <img class="object-cover absolute w-full h-full rounded top-0 left-0" :src="slide" alt="slide" />
                     </div>
                 </SwiperSlide>
             </Swiper>
             <!-- thumbnails -->
             <section class="hidden lg:flex items-center gap-2">
                 <div class="size-24 rounded overflow-hidden cursor-pointer" @click="toggleSliderModalStatus(true)" v-for="thumb in sliderImages">
-                    <img :src="`${useRuntimeConfig().public.imageUrl}/storage/` + thumb" class="size-full object-cover" />
+                    <img :src="thumb" class="size-full object-cover" />
                 </div>
             </section>
         </div>

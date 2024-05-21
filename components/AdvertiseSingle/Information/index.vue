@@ -69,7 +69,7 @@ export default {
         const totalInfo = ref(computed(() => advertiseStore.information));
         const spec = ref([]);
 
-        console.log(totalInfo.value);
+        // console.log(totalInfo.value);
 
         // for (const [key, value] of Object.entries(totalInfo.value)) {
         //     const obj = {

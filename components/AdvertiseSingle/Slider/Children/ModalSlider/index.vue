@@ -12,7 +12,7 @@
         <Swiper :modules="modalModules" class="w-full lg:max-w-2xl" :keyboard="true">
             <SwiperSlide v-for="slide in gallery">
                 <div class="relative pt-[100%] md:pt-[75%] w-full" @click="toggleSliderModalStatus(true)">
-                    <img class="object-contain absolute w-full h-full rounded top-0 left-0" :src="`${useRuntimeConfig().public.imageUrl}/storage/` + slide" alt="slide" />
+                    <img class="object-contain absolute w-full h-full rounded top-0 left-0" :src="slide" alt="slide" />
                 </div>
             </SwiperSlide>
         </Swiper>
