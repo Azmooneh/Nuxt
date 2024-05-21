@@ -1,6 +1,6 @@
 <template>
     <section class="custom-slider-mobile-arrows">
-        <Swiper v-bind="settings" :modules="relatedModules" :navigation="true" :speed="750" class="mb-4" :keyboard="true">
+        <Swiper v-bind="settings" :modules="relatedModules" :navigation="true" :speed="750" class="mb-4">
             <SwiperSlide v-for="slide in 6">
                 <NuxtLink to="/"
                           class="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md dark:bg-gray-800 dark:border-gray-700 transition-all duration-300">
@@ -37,7 +37,7 @@
 
 <script>
 import {Swiper, SwiperSlide} from 'swiper/vue';
-import {Keyboard, Navigation} from 'swiper/modules';
+import {Navigation} from 'swiper/modules';
 
 export default {
     name: 'Advertise Related Advertises',
@@ -61,7 +61,7 @@ export default {
 
         return {
             settings,
-            relatedModules: [Navigation, Keyboard],
+            relatedModules: [Navigation],
         }
     }
 }

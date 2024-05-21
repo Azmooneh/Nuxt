@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="custom-slider-mobile-arrows">
-            <Swiper :navigation="true" :speed="750" class="mb-4" :modules="mainModules" :keyboard="true">
+            <Swiper :navigation="true" :speed="750" class="mb-4" :modules="mainModules">
                 <SwiperSlide v-for="slide in gallery">
                     <div class="relative pt-[100%] md:pt-[75%] w-full" @click="toggleSliderModalStatus(true)">
                         <img class="object-cover absolute w-full h-full rounded top-0 left-0" :src="`${useRuntimeConfig().public.imageUrl}/storage/` + slide" alt="slide" />
@@ -24,7 +24,7 @@
 <script>
 import {Swiper, SwiperSlide} from 'swiper/vue';
 import {useAdvertiseSingle, useAdvertiseSingleCommon} from "~/store/Advertise/index.js";
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import ModalSlider from "~/components/AdvertiseSingle/Slider/Children/ModalSlider/index.vue";
 
 export default {
@@ -50,7 +50,7 @@ export default {
             sliderImages,
             gallery,
             toggleSliderModalStatus,
-            mainModules: [Navigation, Keyboard],
+            mainModules: [Navigation],
         }
     }
 }

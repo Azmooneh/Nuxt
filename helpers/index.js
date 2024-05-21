@@ -21,3 +21,7 @@ export const getHoursPast = (publishTime) => {
         return `${daysPast} روز قبل`;
     }
 }
+
+export const renderCurrentDate = () => {
+    return new Intl.DateTimeFormat('fa-IR', { dateStyle: 'medium' }).format(new Date())
+}
