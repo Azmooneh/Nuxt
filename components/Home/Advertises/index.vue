@@ -26,9 +26,11 @@
                 </div>
 
                 <div class="flex flex-row-reverse justify-between items-center ">
-                                <span
-                                    class="text-xs md:text-sm inline-flex items-center font-medium text-primary-600 dark:text-primary-500">{{ numberWithCommas(ad.price)
-                                    }} تومان</span>
+                    <div
+                        class="text-xs md:text-sm inline-flex items-center font-medium text-primary-600 dark:text-primary-500">
+                        <span v-if="ad.agreement"> {{ numberWithCommas(ad.price) }} تومان </span>
+                        <span v-else> توافقی </span>
+                    </div>
                     <span
                         class="text-[0.7rem] line-clamp-1 text-gray-900 dark:text-gray-300"> {{ getHoursPast(ad.published_date)
                         }} </span>

@@ -38,8 +38,10 @@ export default defineNuxtConfig({
     runtimeConfig: {
         apiSecret: '', // can be overridden by NUXT_API_SECRET environment variable
         public: {
-            imageUrl: 'http://127.0.0.1:8000',
-            apiBase: 'http://127.0.0.1:8000/api', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+            // imageUrl: 'http://127.0.0.1:8000',
+            // apiBase: 'http://127.0.0.1:8000/api', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+            imageUrl: 'http://paye1.com',
+            apiBase: 'http://paye1.com/api', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
         }
     },
 })

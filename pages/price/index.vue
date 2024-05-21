@@ -65,6 +65,8 @@ export default {
         const error = ref(null);
         const watchLoading = ref(true);
 
+        // localStorage.setItem('pinnedItems', 1);
+
         const loadPrices = async () => {
             try {
                 loading.value = true;
@@ -84,6 +86,10 @@ export default {
         });
 
         loadPrices();
+
+        onMounted(() => {
+            dailyPriceStore.initializePinnedList();
+        })
 
 
         return {
