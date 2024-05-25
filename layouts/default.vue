@@ -1,7 +1,7 @@
-<template class="">
-    <section class="font-yekan number-fa">
+<template>
+    <section class="font-yekan number-fa bg_background_layout">
         <Header />
-<!---->
+
         <slot />
     </section>
 </template>

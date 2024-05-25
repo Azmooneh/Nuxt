@@ -164,7 +164,13 @@ body{
     @apply min-h-[calc(100vh-61px)];
 }
 /*custom color components starts */
+.bg_background_layout{
+    @apply bg-gray-100 dark:bg-gray-800;
+}
+.bg_background_content{
+    @apply bg-white dark:bg-gray-900;
+}
 .icon-colors{
-    @apply text-gray-700;
+    @apply text-gray-700 dark:text-gray-50;
 }
 /*custom color components ends */

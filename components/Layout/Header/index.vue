@@ -1,7 +1,7 @@
 <template>
     <header
-        class="sticky top-0 bg-white z-[1] mb-4" id="main-header">
-        <section class="bg-gray-50 h-12">
+        class="sticky top-0 z-[1]" id="main-header">
+        <section class="border-b border-b-gray-200 dark:border-b-gray-700 bg_background_layout h-12 sm:h-16">
             <div class="container flex justify-between items-center h-full">
                 <div class="flex items-center gap-4">
                     <!-- hamburger menu -->
@@ -10,13 +10,13 @@
                     </button>
 
                     <NuxtLink to="/">
-                        <Paye1Logo size="w-[72px] h-8" />
+                        <Paye1Logo size="w-[72px] sm:w-[90px] h-8 sm:h-10" degree="fill-primary-700 dark:fill-primary-600" text="fill-gray-900 dark:fill-gray-50" />
                     </NuxtLink>
                 </div>
 
                 <div class="flex items-center lg:order-2 gap-1">
                     <button type="button" @click="toggleDarkmode"
-                            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-1.5 hidden">
+                            class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-1.5">
                         <svg v-if="isDark" class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"
                              xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -32,7 +32,7 @@
                     </button>
 
                     <NuxtLink to="/price"
-                              class="hidden sm:flex py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                              class="hidden lg:flex py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                         قیمت روز خودرو
                     </NuxtLink>
                     <NuxtLink to="/add"
