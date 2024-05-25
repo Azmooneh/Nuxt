@@ -41,8 +41,6 @@ export default {
             })
         })
 
-        console.log(unpinned.value)
-
         return {
             numberWithCommas,
             renderCurrentDate,
