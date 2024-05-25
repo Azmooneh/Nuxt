@@ -44,4 +44,8 @@ export default defineNuxtConfig({
             apiBase: 'https://paye1.com/api',
         }
     },
+
+    plugins: [
+        {src: '~/plugins/vue3-toastify.ts'},
+    ]
 })

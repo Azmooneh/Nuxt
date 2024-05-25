@@ -1,3 +1,4 @@
+@import url('vue3-toastify/dist/index.css');
 @import url('../fonts/icons.css');
 
 @tailwind base;

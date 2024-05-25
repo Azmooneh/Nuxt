@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 import {useHomePage} from "~/store/index.js";
 import Advertises from "~/components/Home/Advertises/index.vue";
 

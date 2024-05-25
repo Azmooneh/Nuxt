@@ -58,7 +58,6 @@ export default {
         onMounted(() => {
             advertisesList.value = document.getElementById('advertises_list');
             mainHeader.value = document.getElementById('main-header');
-            // window.addEventListener('scroll', checkScrollPosition);
         })
 
         const checkScrollPosition = () => {
