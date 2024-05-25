@@ -1,5 +1,5 @@
 <template>
-    <section class="font-yekan number-fa bg_background_layout">
+    <section class="font-sans number-fa bg_background_layout">
         <Header />
 
         <slot />

@@ -17,7 +17,7 @@ export default {
         },
         extend: {
             fontFamily: {
-                yekan: "IRANYekanX, serif",
+                sans: "IRANSansX, serif",
                 icomoon: 'icomoon',
             },
             colors: {

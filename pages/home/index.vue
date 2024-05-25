@@ -8,8 +8,11 @@
     </section>
     <!-- data -->
     <section v-else
-             class="bg-white dark:bg-gray-900 min_h_screen overflow-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white dark:scrollbar-thumb-gray-800 dark:scrollbar-track-gray-900">
-        <section class="p-4 mx-auto container">
+             class="min_h_screen scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white dark:scrollbar-thumb-gray-800 dark:scrollbar-track-gray-900 pt-4">
+        <!-- categories -->
+        <Categories />
+
+        <section class="mx-auto container">
             <Advertises />
         </section>
     </section>
@@ -18,11 +21,13 @@
 <script>
 import {useHomePage} from "~/store/index.js";
 import Advertises from "~/components/Home/Advertises/index.vue";
+import Categories from "~/components/Home/Categories/index.vue";
 
 export default {
     name: "Home Page",
     components: {
         Advertises,
+        Categories,
     },
     setup() {
         const homePageStore = useHomePage();
