@@ -163,3 +163,8 @@ body{
 .min_h_screen{
     @apply min-h-[calc(100vh-61px)];
 }
+/*custom color components starts */
+.icon-colors{
+    @apply text-gray-700;
+}
+/*custom color components ends */
