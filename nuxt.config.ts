@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     },
 
     plugins: [
+        {src: '~/plugins/lottie-player/lottie-player.client.ts'},
         {src: '~/plugins/vue3-toastify.ts'},
     ]
 })

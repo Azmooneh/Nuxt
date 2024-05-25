@@ -11,9 +11,17 @@
              class="bg-gray-50 dark:bg-gray-900 h-[calc(100vh-61px)] overflow-auto scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white dark:scrollbar-thumb-gray-800 dark:scrollbar-track-gray-900">
         <section class="p-4 mx-auto container flex items-center justify-center h-full">
             <div class="flex items-center justify-center gap-4 flex-col">
-                <div class="mb-4 relative">
-                    <UnderConstructor />
-<!--                    <i class="font-icomoon icon-logoo-1-2 text-[200px]"></i>-->
+                <div class="mb-4 relative h-[300px]">
+                    <client-only>
+                        <lottie-player
+                            src="https://lottie.host/988b194d-ac9c-4570-a46a-b158aba5661c/bv07GNWfNj.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 500px; height: 300px;"
+                            loop
+                            autoplay>
+                        </lottie-player>
+                    </client-only>
                 </div>
                 <p class="text-base font-medium text-gray-900 dark:text-white"> این صفحه در حال راه اندازی می باشد. </p>
             </div>
@@ -22,15 +30,14 @@
 </template>
 
 <script>
-import UnderConstructor from '~/assets/icons/lottify/under_constructor/index.json';
 
 export default {
     name: "Add Advertise",
     components: {
-        UnderConstructor,
     },
     setup(){
-        console.log(JSON.stringify(UnderConstructor))
+        return {
+        }
     }
 }
 </script>
