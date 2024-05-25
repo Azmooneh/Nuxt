@@ -57,12 +57,11 @@ export default {
         const error = ref(null);
         const watchLoading = ref(true);
 
-        // localStorage.setItem('pinnedItems', 1);
-
         const loadPrices = async () => {
             try {
                 loading.value = true;
                 const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/price/list`);
+                console.log(response.data.value);
                 if (response.data.value.status == 200) {
                     dailyPriceStore.savePriceList(response.data.value.data);
                 }

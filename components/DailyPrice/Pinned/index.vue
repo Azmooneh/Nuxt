@@ -30,13 +30,12 @@ export default {
     name: "Daily Price Pinned",
     setup(){
         const dailyPriceStore = useDailyPrice();
-        // const pinnedItems = computed(() => dailyPriceStore.priceList.filter(item => item.isPinned));
-        const list = ref(computed(() => dailyPriceStore.testPriceList2));
+        const clonedPriceList = ref(computed(() => dailyPriceStore.clonedPriceList));
         const unpinned = ref(computed(() => dailyPriceStore.unpinnedPriceList));
         const pinnedItems = ref([]);
         const togglePin = dailyPriceStore.togglePin;
 
-        list.value.map(category => {
+        clonedPriceList.value.map(category => {
             category.list.map(item => {
                 pinnedItems.value.push(item);
             })
