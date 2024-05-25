@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="sticky top-0 start-0 end-0 bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 z-[2]">
+        class="sticky top-0 start-0 end-0 bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 z-[2]" id="main-header">
         <div class="container mx-auto flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
                 <!--                <button @click.prevent="toggleSidebar"-->

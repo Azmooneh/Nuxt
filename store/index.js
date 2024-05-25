@@ -35,6 +35,9 @@ export const useHomePage = defineStore('HomePage', {
     actions: {
         saveAdvertises(list){
             this.advertises = list;
+        },
+        updateAdvertises(list){
+            this.advertises.push(list);
         }
     },
 })
