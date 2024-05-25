@@ -12,7 +12,8 @@
         <section class="p-4 mx-auto container flex items-center justify-center h-full">
             <div class="flex items-center justify-center gap-4 flex-col">
                 <div class="mb-4 relative">
-                    <i class="font-icomoon icon-logoo-1-2 text-[200px]"></i>
+                    <UnderConstructor />
+<!--                    <i class="font-icomoon icon-logoo-1-2 text-[200px]"></i>-->
                 </div>
                 <p class="text-base font-medium text-gray-900 dark:text-white"> این صفحه در حال راه اندازی می باشد. </p>
             </div>
@@ -21,10 +22,15 @@
 </template>
 
 <script>
+import UnderConstructor from '~/assets/icons/lottify/under_constructor/index.json';
+
 export default {
     name: "Add Advertise",
+    components: {
+        UnderConstructor,
+    },
     setup(){
-
+        console.log(JSON.stringify(UnderConstructor))
     }
 }
 </script>
