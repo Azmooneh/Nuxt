@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.22",
     "@lottiefiles/lottie-player": "^2.0.4",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.11.2",

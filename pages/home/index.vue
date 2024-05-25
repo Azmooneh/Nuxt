@@ -34,7 +34,7 @@ export default {
             try {
                 loading.value = true;
                 const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list`);
-                    // console.log(`${useRuntimeConfig().public.apiBase}/ad/list`, response.data.value)
+                    // console.log(response.data.value)
                 if (response.data.value.status == 200) {
                     homePageStore.saveAdvertises(response.data.value.data);
                 };

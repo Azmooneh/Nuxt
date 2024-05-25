@@ -1,17 +1,15 @@
 <template>
     <header
-        class="sticky top-0 bg-white z-[1]" id="main-header">
+        class="sticky top-0 bg-white z-[1] mb-4" id="main-header">
         <section class="bg-gray-50 h-12">
             <div class="container flex justify-between items-center h-full">
                 <div class="flex items-center gap-4">
+                    <!-- hamburger menu -->
                     <button type="button" class="size-6 cursor-pointer">
-<!--                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
-<!--                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />-->
-<!--                        </svg>-->
                         <i class="font-icomoon icon-bars text-2xl icon-colors"></i>
                     </button>
 
-                    <NuxtLink to="/" class="">
+                    <NuxtLink to="/">
                         <Paye1Logo size="w-[72px] h-8" />
                     </NuxtLink>
                 </div>
@@ -43,10 +41,7 @@
                     </NuxtLink>
 
                     <!-- profile -->
-                    <button type="button" class="flex items-end cursor-pointer">
-                        <i class="font-icomoon icon-user-outline text-2xl leading-6 icon-colors"></i>
-                        <i class="icon-chevron-down-outline font-icomoon text-base leading-5 icon-colors"></i>
-                    </button>
+                    <Profile />
                 </div>
             </div>
         </section>
@@ -56,11 +51,13 @@
 <script>
 import { useCommon } from '~/store/index.js';
 import Paye1Logo from "assets/icons/website/paye1.vue";
+import Profile from "~/components/Layout/Header/children/Profile/index.vue";
 
 export default {
     name: 'Header',
     components: {
         Paye1Logo,
+        Profile,
     },
     setup() {
         const commonStore = useCommon();
