@@ -6,8 +6,8 @@
         <!-- <i class="font-icomoon text-gray-400 icon-search text-3xl px-2 cursor-default"></i> -->
         <!-- <input type="text" class="size-full bg-transparent outline-none focus:ring-0 border-0 pr-0 text-xs placeholder:text-gray-400" placeholder="جستجوی برند و مدل ماشین" /> -->
         <!-- </div> -->
-        <div class="flex flex-col gap-4 text-sm font-normal text-gray-400">
-            <a :href="'#' + category.title_en" class="" v-for="(category, index) in clonedPriceList" :key="index"> قیمت {{ category.title_fa }} </a>
+        <div class="flex flex-col gap-4 text-sm font-normal text-gray-400 toc-titles-container">
+            <a :href="'#section-' + category.title_en" :id="`toc-title-${category.title_en}`" @click.prevent="scrollToElement(`toc-title-${category.title_en}`)" class="" v-for="(category, index) in clonedPriceList" :key="index"> قیمت {{ category.title_fa }} </a>
 <!--            <a href="#" class="text-primary-800 dark:text-primary-400 font-medium"> قیمت ماشین آلات کشاورزی </a>-->
         </div>
     </section>
@@ -25,9 +25,20 @@ export default {
         const clonedPriceList = ref(computed(() => dailyPriceStore.clonedPriceList));
         console.log(clonedPriceList.value);
 
+        const scrollToElement = (event) => {
+            const targetId = document.getElementById(event).getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            // const yOffset = -160;
+            targetElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            // const finalY = window.scrollY + targetElement.getBoundingClientRect().top + yOffset;
+            // window.scrollTo({ top: finalY, behavior: "smooth" });
+            console.log(targetElement.getBoundingClientRect());
+        }
+
         return {
             renderCurrentDate,
             clonedPriceList,
+            scrollToElement,
         }
     }
 }

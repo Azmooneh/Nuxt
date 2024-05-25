@@ -1,6 +1,6 @@
 <template>
     <template v-for="(category, index) in clonedPriceList" :key="index">
-        <section class="text-gray-900 dark:text-white mb-10" :id="category.title_en">
+        <section class="text-gray-900 dark:text-white mb-10" :id="`section-${category.title_en}`">
             <div class="flex items-center justify-between mb-4">
                 <h3 class="text-xl font-medium"> لیست قیمت روز {{ category.title_fa }} </h3>
                 <span class="text-sm font-normal sm:hidden"> تومان </span>
