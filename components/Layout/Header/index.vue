@@ -1,40 +1,15 @@
 <template>
-    <nav
-        class="sticky top-0 start-0 end-0 bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 z-[2]" id="main-header">
-        <div class="container mx-auto flex flex-wrap justify-between items-center">
+    <header
+        class="sticky top-0 bg-white px-4 z-[1]" id="main-header">
+        <div class="container flex justify-between items-center h-12">
+            <div class="flex items-center">
+                <button type="button" class="size-6 cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
             <div class="flex justify-start items-center">
-                <!--                <button @click.prevent="toggleSidebar"-->
-                <!--                        class="p-2 ltr:mr-2 rtl:ml-2 rtl:rotate-180 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">-->
-                <!--                    <svg-->
-                <!--                        aria-hidden="true"-->
-                <!--                        :class="{'hidden': openSidebar}"-->
-                <!--                        class="w-6 h-6"-->
-                <!--                        fill="currentColor"-->
-                <!--                        viewBox="0 0 20 20"-->
-                <!--                        xmlns="http://www.w3.org/2000/svg"-->
-                <!--                    >-->
-                <!--                        <path-->
-                <!--                            fill-rule="evenodd"-->
-                <!--                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"-->
-                <!--                            clip-rule="evenodd"-->
-                <!--                        ></path>-->
-                <!--                    </svg>-->
-                <!--                    <svg-->
-                <!--                        aria-hidden="true"-->
-                <!--                        :class="{'hidden': !openSidebar}"-->
-                <!--                        class="w-6 h-6"-->
-                <!--                        fill="currentColor"-->
-                <!--                        viewBox="0 0 20 20"-->
-                <!--                        xmlns="http://www.w3.org/2000/svg"-->
-                <!--                    >-->
-                <!--                        <path-->
-                <!--                            fill-rule="evenodd"-->
-                <!--                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"-->
-                <!--                            clip-rule="evenodd"-->
-                <!--                        ></path>-->
-                <!--                    </svg>-->
-                <!--                    <span class="sr-only">Toggle sidebar</span>-->
-                <!--                </button>-->
                 <NuxtLink to="/">
                     <img
                         src="https://paye1.com/storage/media/land/files/zpYWsElFaU9L8QBd0pNKXTHPSncR59ljC0NSaXJ4.svg"
@@ -78,11 +53,11 @@
                 </NuxtLink>
             </div>
         </div>
-    </nav>
+    </header>
 </template>
 
 <script>
-import {useCommon} from '~/store/index.js';
+import { useCommon } from '~/store/index.js';
 
 export default {
     name: 'Header',

@@ -7,6 +7,32 @@
     * {
         @apply transition-all duration-300;
     }
+
+    :root{
+        /*gray colors*/
+        --theme-gray-50: 249,250,251;
+        --theme-gray-100: 243,244,246;
+        --theme-gray-200: 229,231,235;
+        --theme-gray-300: 209,213,219;
+        --theme-gray-400: 156,163,175;
+        --theme-gray-500: 107,114,128;
+        --theme-gray-600: 75,85,99;
+        --theme-gray-700: 55,65,81;
+        --theme-gray-800: 31,42,55;
+        --theme-gray-900: 17,25,40;
+
+        /* blur colors */
+        --theme-primary-50: 235,245,255;
+        --theme-primary-100: 225,239,254;
+        --theme-primary-200: 195,221,253;
+        --theme-primary-300: 164,202,254;
+        --theme-primary-400: 118,169,250;
+        --theme-primary-500: 63,131,248;
+        --theme-primary-600: 28,100,242;
+        --theme-primary-700: 26,86,219;
+        --theme-primary-800: 30,66,159;
+        --theme-primary-900: 35,56,118;
+    }
 }
 
 @tailwind components;
