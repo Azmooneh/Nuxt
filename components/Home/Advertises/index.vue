@@ -1,17 +1,16 @@
 <template>
-    <!-- md:grid-cols-2 xl:grid-cols-3 -->
-    <section class="grid grid-cols-1 gap-4 relative" id="advertises_list">
+    <section class="grid grid-cols-1 gap-4 relative container" id="advertises_list">
         <NuxtLink v-for="(ad, index) in advertises.slice(0, 8)" :key="index" :to="'/advertises/' + ad.id"
-                  class="flex flex-row bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md dark:bg-gray-800 dark:border-gray-700 transition-all duration-300">
-            <div class="w-48 sm:w-72 md:w-36 lg:w-44 xl:w-40 md:flex-none">
+                  class="flex hover:bg-gray-200 border border-gray-200 flex-row bg-white rounded-lg overflow-hidden dark:bg-gray-900 dark:border-gray-700">
+            <!-- image -->
+            <div class="w-36 flex-none">
                 <div class="relative w-full pt-[100%]">
                     <img class="object-cover size-full absolute top-0 right-0"
-                         :src="ad.primary_image"
-                         alt="" draggable="false"/>
+                         :src="ad.primary_image" :alt="ad.title" draggable="false" />
                 </div>
             </div>
-            <div
-                class="w-full p-2 sm:p-4 flex flex-col justify-between space-y-5 md:space-y-0 md:py-2">
+            <!-- information -->
+            <div class="w-full p-2 sm:p-4 flex flex-col justify-between space-y-5 md:space-y-0 md:py-2">
                 <div class="flex items-start gap-2 justify-between flex-col md:justify-start md:gap-2">
                     <h2 class="line-clamp-1 tracking-wide xs:line-clamp-2 text-sm leading-6 sm:text-base sm:leading-7 md:text-sm md:leading-6 lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
@@ -35,9 +34,14 @@
         </NuxtLink>
 
         <!-- toggle load more items -->
-        <div class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1]">
-            <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button" class="px-6 h-8 font-medium text-sm text-white bg-blue-500 rounded"> بیشتر </button>
-            <button v-else @click.prevent="burnCheckScrollPosition" type="button" class="px-6 h-8 font-medium text-sm text-white bg-blue-500 rounded"> توقف </button>
+        <div
+            class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1]">
+            <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"
+                    class="px-6 h-8 font-medium text-sm text-white bg-blue-500 rounded"> بیشتر
+            </button>
+            <button v-else @click.prevent="burnCheckScrollPosition" type="button"
+                    class="px-6 h-8 font-medium text-sm text-white bg-blue-500 rounded"> توقف
+            </button>
         </div>
     </section>
 </template>
@@ -63,7 +67,7 @@ export default {
         const checkScrollPosition = () => {
             let scrollY = window.scrollY;
             let innerHeight = window.innerHeight;
-            if((scrollY + innerHeight) - 32 - mainHeader.value.offsetHeight >= advertisesList.value.offsetHeight){
+            if ((scrollY + innerHeight) - 32 - mainHeader.value.offsetHeight >= advertisesList.value.offsetHeight) {
                 console.log("over")
             }
         }
@@ -73,7 +77,8 @@ export default {
                 const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list`);
                 if (response.data.value.status == 200) {
                     homePageStore.updateAdvertises(response.data.value.data);
-                };
+                }
+                ;
             } catch (e) {
 
             } finally {
@@ -91,8 +96,6 @@ export default {
             checkScrollPosition();
             loadMoreStatus.value = true;
         }
-
-
 
 
         return {

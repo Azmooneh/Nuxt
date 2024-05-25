@@ -12,9 +12,7 @@
         <!-- categories -->
         <Categories />
 
-        <section class="mx-auto container">
-            <Advertises />
-        </section>
+        <Advertises />
     </section>
 </template>
 
