@@ -88,10 +88,10 @@ export default {
 
         const loadMoreAdvertises = async (page) => {
             try {
-                const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list?page=${page}`);
-                if (response.data.value.status == 200) {
-                    const list = response.data.value.data;
-                    const listPagination = response.data.value.pagination;
+                const response = await $fetch(`${useRuntimeConfig().public.apiBase}/ad/list?page=${page}`);
+                if (response.status == 200) {
+                    const list = response.data;
+                    const listPagination = response.pagination;
                     homePageStore.updateAdvertises(list, listPagination);
                     if(advertises.value.length == pagination.value.total){
                         burnCheckScrollPosition();
