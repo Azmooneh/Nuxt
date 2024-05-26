@@ -21,14 +21,15 @@
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                     </h2>
                 </div>
-
+                <!-- price & tags -->
                 <div class="flex flex-col gap-2">
-                    <div class="grid overflow-auto scrollbar-none">
-                        <div class="flex items-center gap-2 text-xs font-medium *:label_primary_600 *:h-5 *:flex-none *:px-2 *:rounded-md *:bg_primary_100 *:flex *:items-center">
-                            <p class=""> معاوضه </p>
-                            <p class=""> فوری </p>
-                        </div>
-                    </div>
+                        <!-- tags -->
+<!--                    <div class="grid overflow-auto scrollbar-none">-->
+<!--                        <div class="flex items-center gap-2 text-xs font-medium *:label_primary_600 *:h-5 *:flex-none *:px-2 *:rounded-md *:bg_primary_100 *:flex *:items-center">-->
+<!--                            <p class=""> معاوضه </p>-->
+<!--                            <p class=""> فوری </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="flex justify-between items-center gap-2">
                         <div class="flex items-center gap-2 icon_gray_500">
                             <i class="font-icomoon icon-store-outline text-xl leading-4"></i>
