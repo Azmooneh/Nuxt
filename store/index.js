@@ -38,8 +38,11 @@ export const useHomePage = defineStore('HomePage', {
             this.advertises = list;
             this.advertisePagination = pagination;
         },
-        updateAdvertises(list){
-            this.advertises.push(list);
+        updateAdvertises(list, pagination){
+            list.map(advertise => {
+                this.advertises.push(advertise);
+            })
+            this.advertisePagination = pagination;
         }
     },
 })

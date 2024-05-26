@@ -1,6 +1,6 @@
 <template>
     <section class="grid grid-cols-1 gap-4 relative container mb-10" id="advertises_list">
-        <NuxtLink v-for="(ad, index) in advertises.slice(0, 8)" :key="index" :to="'/advertises/' + ad.id"
+        <NuxtLink v-for="(ad, index) in advertises" :key="index" :to="'/advertises/' + ad.id"
                   class="flex hover:bg-gray-200 border border-gray-200 bg-white rounded-lg overflow-hidden dark:bg-gray-900 dark:border-gray-700">
             <!-- image -->
             <div class="w-36 flex-none">
@@ -46,7 +46,7 @@
         </NuxtLink>
 
         <!-- toggle load more items -->
-        <div
+        <div v-if="!isLastLoaded"
             class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 *:h-8 *:font-medium *:text-sm *:text-white *:bg-blue-500 *:rounded">
             <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"> بیشتر</button>
             <button v-else @click.prevent="burnCheckScrollPosition" type="button"> توقف</button>
@@ -67,6 +67,7 @@ export default {
         const advertisesList = ref(null);
         const mainHeader = ref(null);
         const loadMoreStatus = ref(false);
+        const isLastLoaded = ref(advertises.value.length >= pagination.value.total);
 
         onMounted(() => {
             advertisesList.value = document.getElementById('advertises_list');
@@ -77,17 +78,26 @@ export default {
             let scrollY = window.scrollY;
             let innerHeight = window.innerHeight;
             if ((scrollY + innerHeight) - 32 - mainHeader.value.offsetHeight >= advertisesList.value.offsetHeight) {
-                console.log(pagination.value);
+                if(pagination.value.currentPage < pagination.value.totalPages){
+                    let currentPagination = ref(pagination.value.currentPage);
+                    currentPagination.value += 1;
+                    loadMoreAdvertises(currentPagination.value);
+                }
             }
         }
 
-        const loadMoreAdvertises = async () => {
+        const loadMoreAdvertises = async (page) => {
             try {
-                const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list`);
+                const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list?page=${page}`);
                 if (response.data.value.status == 200) {
-                    homePageStore.updateAdvertises(response.data.value.data);
-                }
-                ;
+                    const list = response.data.value.data;
+                    const listPagination = response.data.value.pagination;
+                    homePageStore.updateAdvertises(list, listPagination);
+                    if(advertises.value.length == pagination.value.total){
+                        burnCheckScrollPosition();
+                        isLastLoaded.value = true;
+                    }
+                };
             } catch (e) {
 
             } finally {
@@ -106,6 +116,11 @@ export default {
             loadMoreStatus.value = true;
         }
 
+        watch(pagination, n => {
+            // console.log(n)
+            console.log(pagination.value.perPage);
+        })
+
 
         return {
             advertises,
@@ -114,6 +129,8 @@ export default {
             burnCheckScrollPosition,
             registerCheckScrollPosition,
             loadMoreStatus,
+            pagination,
+            isLastLoaded,
         }
     }
 }
