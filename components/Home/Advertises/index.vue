@@ -1,7 +1,7 @@
 <template>
-    <section class="grid grid-cols-1 gap-4 relative container" id="advertises_list">
+    <section class="grid grid-cols-1 gap-4 relative container mb-10" id="advertises_list">
         <NuxtLink v-for="(ad, index) in advertises.slice(0, 8)" :key="index" :to="'/advertises/' + ad.id"
-                  class="flex hover:bg-gray-200 border border-gray-200 flex-row bg-white rounded-lg overflow-hidden dark:bg-gray-900 dark:border-gray-700">
+                  class="flex hover:bg-gray-200 border border-gray-200 bg-white rounded-lg overflow-hidden dark:bg-gray-900 dark:border-gray-700">
             <!-- image -->
             <div class="w-36 flex-none">
                 <div class="relative w-full pt-[100%]">
@@ -10,25 +10,36 @@
                 </div>
             </div>
             <!-- information -->
-            <div class="w-full p-2 sm:p-4 flex flex-col justify-between space-y-5 md:space-y-0 md:py-2">
-                <div class="flex items-start gap-2 justify-between flex-col md:justify-start md:gap-2">
-                    <h2 class="line-clamp-1 tracking-wide xs:line-clamp-2 text-sm leading-6 sm:text-base sm:leading-7 md:text-sm md:leading-6 lg:text-lg lg:leading-8 xl:text-base xl:leading-7 font-semibold tracking-tight text-gray-900 dark:text-white">
+            <div class="flex-1 p-2 sm:p-4 flex flex-col overflow-hidden justify-between">
+                <!-- state & release date & name -->
+                <div class="flex flex-col gap-2.5">
+                    <div class="flex items-center justify-between gap-2">
+                        <p class="label_primary_600 text-xs font-medium line-clamp-1"> {{ ad.province }} </p>
+                        <p class="label_gray_500 text-xs font-normal line-clamp-1"> {{ getHoursPast(ad.published_date) }} </p>
+                    </div>
+                    <h2 class="line-clamp-2 tracking-wide label_gray_600 text-sm leading-6 font-normal">
                         {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                     </h2>
-                    <span
-                        class="text-nowrap bg-primary-100 text-primary-800 text-[0.7rem] font-medium inline-flex items-center px-1.5 py-0.5 rounded dark:bg-primary-200/75 dark:text-primary-800"> {{ ad.province
-                        }} ، {{ ad.city }} </span>
                 </div>
 
-                <div class="flex flex-row-reverse justify-between items-center ">
-                    <div
-                        class="text-xs xs:text-sm md:text-xs lg:text-sm inline-flex items-center font-medium text-primary-600 dark:text-primary-500">
-                        <span v-if="ad.agreement == 0"> {{ numberWithCommas(ad.price) }} تومان </span>
-                        <span v-else> توافقی </span>
+                <div class="flex flex-col gap-2">
+                    <div class="grid overflow-auto scrollbar-none">
+                        <div class="flex items-center gap-2 text-xs font-medium *:label_primary_600 *:h-5 *:flex-none *:px-2 *:rounded-md *:bg_primary_100 *:flex *:items-center">
+                            <p class=""> معاوضه </p>
+                            <p class=""> فوری </p>
+                        </div>
                     </div>
-                    <span
-                        class="text-[0.7rem] line-clamp-1 text-gray-900 dark:text-gray-300"> {{ getHoursPast(ad.published_date)
-                        }} </span>
+                    <div class="flex justify-between items-center gap-2">
+                        <div class="flex items-center gap-2 icon_gray_500">
+                            <i class="font-icomoon icon-store-outline text-xl leading-4"></i>
+                            <p class="hidden xs:block text-xs font-normal"> نمایشگاه </p>
+                        </div>
+                        <div
+                            class="text-xs xs:text-sm inline-flex items-center font-medium label_primary_600">
+                            <span v-if="ad.agreement == 0"> {{ numberWithCommas(ad.price) }} تومان </span>
+                            <span v-else> توافقی </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </NuxtLink>

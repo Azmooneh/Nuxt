@@ -116,6 +116,33 @@
     .flex_center{
         @apply flex items-center justify-center;
     }
+
+    /*custom color components starts */
+    .bg_background_layout{
+        @apply bg-gray-100 dark:bg-gray-800;
+    }
+    .bg_background_content{
+        @apply bg-white dark:bg-gray-900;
+    }
+    .icon-colors{
+        @apply text-gray-700 dark:text-gray-50;
+    }
+    .icon_gray_500{
+        @apply text-gray-500 dark:text-gray-50;
+    }
+    .label_primary_600{
+        @apply text-primary-600 dark:text-primary-400;
+    }
+    .bg_primary_100{
+        @apply bg-primary-100 dark:bg-gray-700;
+    }
+    .label_gray_500{
+        @apply text-gray-500 dark:text-gray-50;
+    }
+    .label_gray_600{
+        @apply text-gray-600 dark:text-gray-200;
+    }
+    /*custom color components ends */
 }
 
 @tailwind utilities;
@@ -153,14 +180,3 @@ body{
 .min_h_screen{
     @apply min-h-[calc(100vh-61px)];
 }
-/*custom color components starts */
-.bg_background_layout{
-    @apply bg-gray-100 dark:bg-gray-800;
-}
-.bg_background_content{
-    @apply bg-white dark:bg-gray-900;
-}
-.icon-colors{
-    @apply text-gray-700 dark:text-gray-50;
-}
-/*custom color components ends */
