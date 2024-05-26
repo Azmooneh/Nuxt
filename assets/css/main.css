@@ -4,9 +4,7 @@
 @tailwind base;
 
 @layer base {
-    * {
-        @apply transition-all duration-300;
-    }
+
 
     :root{
         /*gray colors*/
@@ -118,8 +116,11 @@
     }
 
     /*custom color components starts */
-    .bg_background_layout{
+    .bg_background_header{
         @apply bg-gray-100 dark:bg-gray-800;
+    }
+    .bg_background_footer{
+        @apply bg-gray-50 dark:bg-gray-700;
     }
     .bg_background_content{
         @apply bg-white dark:bg-gray-900;
@@ -159,6 +160,10 @@
         -webkit-font-feature-settings: "ss03";
         font-feature-settings: "ss03";
     }
+}
+
+*, .font-icomoon {
+    @apply transition-all duration-150 delay-0 ease-in;
 }
 
 body{

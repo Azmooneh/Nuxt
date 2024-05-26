@@ -47,7 +47,7 @@
 
         <!-- toggle load more items -->
         <div v-if="!isLastLoaded"
-            class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 *:h-8 *:font-medium *:text-sm *:text-white *:bg-blue-500 *:rounded">
+            class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-white dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 *:h-8 *:font-medium *:text-sm *:text-white *:bg-blue-500 *:rounded">
             <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"> بیشتر</button>
             <button v-else @click.prevent="burnCheckScrollPosition" type="button"> توقف</button>
         </div>
@@ -66,26 +66,34 @@ export default {
         const pagination = ref(computed(() => homePageStore.advertisePagination));
         const advertisesList = ref(null);
         const mainHeader = ref(null);
+        const mainCategories = ref(null);
         const loadMoreStatus = ref(false);
         const isLastLoaded = ref(advertises.value.length >= pagination.value.total);
+        const scrollDebounce = ref(null);
 
         onMounted(() => {
             advertisesList.value = document.getElementById('advertises_list');
             mainHeader.value = document.getElementById('main-header');
+            mainCategories.value = document.getElementById('home-categories');
         })
 
+        // get next page data on scroll to end.
         const checkScrollPosition = () => {
-            let scrollY = window.scrollY;
-            let innerHeight = window.innerHeight;
-            if ((scrollY + innerHeight) - 32 - mainHeader.value.offsetHeight >= advertisesList.value.offsetHeight) {
-                if(pagination.value.currentPage < pagination.value.totalPages){
-                    let currentPagination = ref(pagination.value.currentPage);
-                    currentPagination.value += 1;
-                    loadMoreAdvertises(currentPagination.value);
+            clearTimeout(scrollDebounce.value);
+            scrollDebounce.value = setTimeout(() => {
+                let scrollY = window.scrollY;
+                let innerHeight = window.innerHeight;
+                if ((scrollY + innerHeight) - 32 - mainHeader.value.offsetHeight - mainCategories.value.offsetHeight >= advertisesList.value.offsetHeight) {
+                    if(pagination.value.currentPage < pagination.value.totalPages){
+                        let currentPagination = ref(pagination.value.currentPage);
+                        currentPagination.value += 1;
+                        loadMoreAdvertises(currentPagination.value);
+                    }
                 }
-            }
+            }, 300);
         }
 
+        // push new items to prev list Array
         const loadMoreAdvertises = async (page) => {
             try {
                 const response = await $fetch(`${useRuntimeConfig().public.apiBase}/ad/list?page=${page}`);
@@ -97,7 +105,7 @@ export default {
                         burnCheckScrollPosition();
                         isLastLoaded.value = true;
                     }
-                };
+                }
             } catch (e) {
 
             } finally {
@@ -105,22 +113,18 @@ export default {
             }
         }
 
+        // stop onScroll function
         const burnCheckScrollPosition = () => {
             window.removeEventListener('scroll', checkScrollPosition);
             loadMoreStatus.value = false;
         }
 
+        // start onScroll function
         const registerCheckScrollPosition = () => {
             window.addEventListener('scroll', checkScrollPosition);
             checkScrollPosition();
             loadMoreStatus.value = true;
         }
-
-        watch(pagination, n => {
-            // console.log(n)
-            console.log(pagination.value.perPage);
-        })
-
 
         return {
             advertises,

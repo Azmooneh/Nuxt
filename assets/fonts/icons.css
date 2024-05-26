@@ -46,15 +46,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus-1:before {
+    content: "\e902";
+}
 .icon-list:before {
     content: "\e900";
     color: #4d4d4d;
 }
 .icon-file-lines:before {
     content: "\e901";
-}
-.icon-Vector:before {
-    content: "\e902";
 }
 .icon-chart:before {
     content: "\e903";
@@ -75,10 +75,4 @@
 }
 .icon-bars:before {
     content: "\e908";
-}
-.icon-bullhorn:before {
-    content: "\e91a";
-}
-.icon-circle-left:before {
-    content: "\ea44";
 }

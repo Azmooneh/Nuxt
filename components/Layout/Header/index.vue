@@ -1,7 +1,7 @@
 <template>
     <header
         class="sticky top-0 z-[1]" id="main-header">
-        <section class="border-b border-b-gray-200 dark:border-b-gray-700 bg_background_layout h-12 sm:h-16">
+        <section class="border-b border-b-gray-200 dark:border-b-gray-700 bg_background_header h-12 sm:h-16">
             <div class="container flex justify-between items-center h-full">
                 <div class="flex items-center gap-4">
                     <!-- hamburger menu -->

@@ -1,14 +1,14 @@
 <template>
     <!-- skeletons -->
-    <section class="min_h_screen bg-white dark:bg-gray-900 pt-4" v-if="watchLoading">loading</section>
+    <section v-if="watchLoading">loading</section>
     <!-- if we have error -->
-    <section v-else-if="error" class="flex-col w-full h-a gap-4 flex_center min_h_screen bg-white dark:bg-gray-900">
+    <section v-else-if="error" class="flex-col w-full gap-4 flex_center">
         <iframe src="https://lottie.host/embed/fa73d967-9d5d-40c4-ba37-d8dc01185d88/XVqCFf2DuQ.json"></iframe>
         <p class="text-base font-medium text-center caption_color"> ارور: {{ error }} </p>
     </section>
     <!-- data -->
     <section v-else
-             class="min_h_screen scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white dark:scrollbar-thumb-gray-800 dark:scrollbar-track-gray-900 pt-4">
+             class="scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white dark:scrollbar-thumb-gray-800 dark:scrollbar-track-gray-900">
         <!-- categories -->
         <Categories />
 
@@ -37,7 +37,6 @@ export default {
             try {
                 loading.value = true;
                 const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list`);
-                    // console.log(response.data.value)
                 if (response.data.value.status == 200) {
                     const list = response.data.value.data;
                     const pagination = response.data.value.pagination;
