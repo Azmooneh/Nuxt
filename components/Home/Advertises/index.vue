@@ -47,13 +47,9 @@
 
         <!-- toggle load more items -->
         <div
-            class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1]">
-            <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"
-                    class="px-6 h-8 font-medium text-sm text-white bg-blue-500 rounded"> بیشتر
-            </button>
-            <button v-else @click.prevent="burnCheckScrollPosition" type="button"
-                    class="px-6 h-8 font-medium text-sm text-white bg-blue-500 rounded"> توقف
-            </button>
+            class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 *:h-8 *:font-medium *:text-sm *:text-white *:bg-blue-500 *:rounded">
+            <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"> بیشتر</button>
+            <button v-else @click.prevent="burnCheckScrollPosition" type="button"> توقف</button>
         </div>
     </section>
 </template>
@@ -67,6 +63,7 @@ export default {
     setup() {
         const homePageStore = useHomePage();
         const advertises = ref(computed(() => homePageStore.advertises));
+        const pagination = ref(computed(() => homePageStore.advertisePagination));
         const advertisesList = ref(null);
         const mainHeader = ref(null);
         const loadMoreStatus = ref(false);
@@ -80,7 +77,7 @@ export default {
             let scrollY = window.scrollY;
             let innerHeight = window.innerHeight;
             if ((scrollY + innerHeight) - 32 - mainHeader.value.offsetHeight >= advertisesList.value.offsetHeight) {
-                console.log("over")
+                console.log(pagination.value);
             }
         }
 

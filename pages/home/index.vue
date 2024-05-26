@@ -39,7 +39,9 @@ export default {
                 const response = await useFetch(`${useRuntimeConfig().public.apiBase}/ad/list`);
                     // console.log(response.data.value)
                 if (response.data.value.status == 200) {
-                    homePageStore.saveAdvertises(response.data.value.data);
+                    const list = response.data.value.data;
+                    const pagination = response.data.value.pagination;
+                    homePageStore.saveAdvertises(list, pagination);
                 };
             } catch (err) {
                 error.value = err.message || 'سرور به مشکل خورده است.';

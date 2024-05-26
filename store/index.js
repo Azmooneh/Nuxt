@@ -30,11 +30,13 @@ export const useHomePage = defineStore('HomePage', {
     state: () => {
         return {
             advertises: [],
+            advertisePagination: {},
         }
     },
     actions: {
-        saveAdvertises(list){
+        saveAdvertises(list, pagination){
             this.advertises = list;
+            this.advertisePagination = pagination;
         },
         updateAdvertises(list){
             this.advertises.push(list);
