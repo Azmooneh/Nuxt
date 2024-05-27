@@ -1,5 +1,5 @@
 <template>
-    <footer class="fixed bottom-0 inset-x-0 bg_background_footer z-[1] lg:static">
+    <footer class="fixed bottom-0 inset-x-0 bg_background_footer lg:bg_gray_900 z-[1] lg:static">
         <div class="h-16 w-full grid grid-cols-5 text-gray-800 dark:text-gray-50 xs:max-w-md xs:mx-auto lg:hidden">
             <NuxtLink to="/" class="flex_center flex-col gap-2 h-full">
                 <i class="font-icomoon icon-search text-xl leading-6"></i>
@@ -27,6 +27,38 @@
                 </svg>
                 <span class="text-xs font-normal"> آگهی ها </span>
             </NuxtLink>
+        </div>
+
+        <div class="hidden label_primary_50 lg:flex items-center justify-between h-16 container">
+            <section class="flex items-center h-full gap-8 xl:gap-12 text-sm font-normal">
+                <NuxtLink to="/" class=""> آگهی ها </NuxtLink>
+                <NuxtLink to="/" class=""> دست اول ها </NuxtLink>
+                <NuxtLink to="/" class=""> مجله خودرو </NuxtLink>
+                <NuxtLink to="/" class=""> پرسش های شما </NuxtLink>
+                <NuxtLink to="/" class=""> تماس با ما </NuxtLink>
+                <NuxtLink to="/" class=""> درباره ما </NuxtLink>
+            </section>
+
+            <section class="flex items-center h-full gap-20 xl:gap-40">
+                <!-- social media -->
+                <div class="flex items-center gap-6">
+                    <a href="#" class="font-icomoon icon-linkedin text-xl"></a>
+                    <a href="#" class="font-icomoon icon-instagram text-xl"></a>
+                    <a href="#" class="font-icomoon icon-twitter text-xl"></a>
+                </div>
+                <!-- enamads -->
+                <div class="flex items-center gap-4">
+                    <a href="#" class="size-9 rounded-lg bg-white flex_center">
+                        <img src="https://paye1.com/storage/media/land/files/VX6CRV7yWLIIibmAVpkwJatp0ZtwHNiYfpHBwxV6.png" class="h-7" />
+                    </a>
+                    <a href="#" class="size-9 rounded-lg bg-white flex_center">
+                        <img src="https://paye1.com/storage/media/land/files/S0oDAMuHlguOSmKFJwE7aK5wSHp47b34T6a2hpEM.png" class="h-7" />
+                    </a>
+                    <a href="#" class="size-9 rounded-lg bg-white flex_center">
+                        <img src="https://paye1.com/storage/media/land/files/gacJhtV1jOzMss9k47bB9F7IK3MXbHYOWIPlPdVQ.png" class="h-7" />
+                    </a>
+                </div>
+            </section>
         </div>
     </footer>
 </template>

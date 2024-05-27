@@ -129,6 +129,9 @@
     .bg_background_content{
         @apply bg-white dark:bg-gray-900;
     }
+    .bg_gray_900{
+        @apply bg-gray-900 dark:bg-gray-800;
+    }
     .bg_primary_100{
         @apply bg-primary-100 dark:bg-gray-700;
     }
@@ -159,8 +162,11 @@
     .hover_label_primary_750{
         @apply hover:text-primary-750 dark:hover:hover:text-primary-500;
     }
+    .label_primary_50{
+        @apply text-primary-50 dark:text-gray-50;
+    }
     .label_primary_600{
-        @apply text-primary-600 dark:text-primary-400;
+         @apply text-primary-600 dark:text-primary-400;
     }
     .icon_primary_700{
         @apply text-primary-700 dark:text-primary-500;

@@ -46,6 +46,15 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-instagram:before {
+    content: "\e90b";
+}
+.icon-linkedin:before {
+    content: "\e90c";
+}
+.icon-twitter:before {
+    content: "\e90d";
+}
 .icon-sun-outline:before {
     content: "\e909";
 }
