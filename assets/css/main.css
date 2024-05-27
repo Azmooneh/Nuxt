@@ -4,8 +4,6 @@
 @tailwind base;
 
 @layer base {
-
-
     :root{
         /*gray colors*/
         --theme-gray-50: 249,250,251;
@@ -28,8 +26,13 @@
         --theme-primary-500: 63,131,248;
         --theme-primary-600: 28,100,242;
         --theme-primary-700: 26,86,219;
+        --theme-primary-750: 5,69,211;
         --theme-primary-800: 30,66,159;
         --theme-primary-900: 35,56,118;
+    }
+
+    *, .font-icomoon {
+        @apply transition-all duration-150 delay-0 ease-in;
     }
 }
 
@@ -85,29 +88,29 @@
         url('../fonts/woff2/IRANSansX-DemiBold.woff2') format('woff2');
     } */
 
+    /*@font-face {*/
+    /*    font-family: IRANSansX;*/
+    /*    font-style: normal;*/
+    /*    font-weight: bold;*/
+    /*    src: url('../fonts/woff/IRANSansX-Bold.woff') format('woff'),*/
+    /*    url('../fonts/woff2/IRANSansX-Bold.woff2') format('woff2');*/
+    /*}*/
+
+    /*@font-face {*/
+    /*    font-family: IRANSansX;*/
+    /*    font-style: normal;*/
+    /*    font-weight: 800;*/
+    /*    src: url('../fonts/woff/IRANSansX-ExtraBold.woff') format('woff'),*/
+    /*    url('../fonts/woff2/IRANSansX-ExtraBold.woff2') format('woff2');*/
+    /*}*/
+
     @font-face {
-        font-family: IRANSansX;
-        font-style: normal;
-        font-weight: bold;
-        src: url('../fonts/woff/IRANSansX-Bold.woff') format('woff'),
-        url('../fonts/woff2/IRANSansX-Bold.woff2') format('woff2');
-    }
-
-    /* @font-face {
-        font-family: IRANSansX;
-        font-style: normal;
-        font-weight: 800;
-        src: url('../fonts/woff/IRANSansX-ExtraBold.woff') format('woff'),
-        url('../fonts/woff2/IRANSansX-ExtraBold.woff2') format('woff2');
-    } */
-
-    /* @font-face {
         font-family: IRANSansX;
         font-style: normal;
         font-weight: 900;
         src: url('../fonts/woff/IRANSansX-Black.woff') format('woff'),
         url('../fonts/woff2/IRANSansX-Black.woff2') format('woff2');
-    } */
+    }
 }
 
 @layer components {
@@ -116,6 +119,7 @@
     }
 
     /*custom color components starts */
+    /* background colors starts */
     .bg_background_header{
         @apply bg-gray-100 dark:bg-gray-800;
     }
@@ -125,23 +129,65 @@
     .bg_background_content{
         @apply bg-white dark:bg-gray-900;
     }
+    .bg_primary_100{
+        @apply bg-primary-100 dark:bg-gray-700;
+    }
+    .bg_primary_700{
+        @apply bg-primary-700 dark:bg-primary-600;
+    }
+    .hover_bg_primary_750{
+        @apply hover:bg-primary-750 dark:hover:bg-primary-500;
+    }
+    .hover_bg_white{
+        @apply hover:bg-white dark:hover:bg-gray-900;
+    }
+    /* background colors ends */
+
+    /* label colors starts */
+
+    .label_primary_600{
+        @apply text-primary-600 dark:text-primary-400;
+    }
+    .hover_label_primary_700{
+        @apply hover:text-primary-700 dark:hover:text-primary-500;
+    }
+    .label_primary_700{
+        @apply text-primary-700 dark:text-primary-400;
+    }
+    .hover_label_primary_750{
+        @apply hover:text-primary-750 dark:hover:hover:text-primary-500;
+    }
+    .icon_primary_700{
+        @apply text-primary-700 dark:text-primary-500;
+    }
+    .label_gray_500{
+        @apply text-gray-500 dark:text-gray-50;
+    }
     .icon-colors{
         @apply text-gray-700 dark:text-gray-50;
     }
     .icon_gray_500{
         @apply text-gray-500 dark:text-gray-50;
     }
-    .label_primary_600{
-        @apply text-primary-600 dark:text-primary-400;
-    }
-    .bg_primary_100{
-        @apply bg-primary-100 dark:bg-gray-700;
-    }
-    .label_gray_500{
-        @apply text-gray-500 dark:text-gray-50;
-    }
     .label_gray_600{
         @apply text-gray-600 dark:text-gray-200;
+    }
+    .label_gray_700{
+        @apply text-gray-700 dark:text-gray-50;
+    }
+    .label_gray_900{
+        @apply text-gray-900 dark:text-gray-50;
+    }
+    /* label colors ends */
+
+    .border_gray_200{
+        @apply border-gray-200 dark:border-gray-500;
+    }
+    .border_primary_600{
+        @apply border-primary-600 dark:border-primary-500;
+    }
+    .hover_border_primary_400{
+        @apply hover:border-primary-400 dark:hover:border-primary-600;
     }
     /*custom color components ends */
 }
@@ -160,11 +206,13 @@
         -webkit-font-feature-settings: "ss03";
         font-feature-settings: "ss03";
     }
+
+    .box{
+        display: -webkit-box;
+    }
 }
 
-*, .font-icomoon {
-    @apply transition-all duration-150 delay-0 ease-in;
-}
+
 
 body{
     direction: rtl;

@@ -1,6 +1,6 @@
 <template>
-    <footer class="fixed bottom-0 inset-x-0 bg_background_footer z-[1]">
-        <div class="h-16 w-full grid grid-cols-5 text-gray-800 dark:text-gray-50 xs:max-w-md xs:mx-auto">
+    <footer class="fixed bottom-0 inset-x-0 bg_background_footer z-[1] lg:static">
+        <div class="h-16 w-full grid grid-cols-5 text-gray-800 dark:text-gray-50 xs:max-w-md xs:mx-auto lg:hidden">
             <NuxtLink to="/" class="flex_center flex-col gap-2 h-full">
                 <i class="font-icomoon icon-search text-xl leading-6"></i>
                 <span class="text-xs font-normal"> جستجو </span>
@@ -9,7 +9,7 @@
                 <i class="font-icomoon icon-chart text-xl leading-6"></i>
                 <span class="text-xs font-normal"> قیمت روز </span>
             </NuxtLink>
-            <NuxtLink to="/" class="flex_center flex-col gap-2 h-full">
+            <NuxtLink to="/add" class="flex_center flex-col gap-2 h-full">
                 <div class="size-8 rounded-full flex_center bg-gray-800">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />

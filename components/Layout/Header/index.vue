@@ -1,17 +1,25 @@
 <template>
     <header
         class="sticky top-0 z-[1]" id="main-header">
-        <section class="border-b border-b-gray-200 dark:border-b-gray-700 bg_background_header h-12 sm:h-16">
+        <section class="hidden lg:block">
+            <a href="#" class="w-full h-16">
+                <img src="https://paye1.com/storage/media/land/files/jbHblglNPKeE2uMVXO2E1Ad8WcZWDVMt1eY84B70.png" class="w-full h-full" />
+            </a>
+        </section>
+        <section class="border-b border-b-gray-200 dark:border-b-gray-700 bg_background_header h-12 sm:h-16 lg:h-20">
             <div class="container flex justify-between items-center h-full">
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-4 lg:gap-2.5">
                     <!-- hamburger menu -->
-                    <button type="button" class="size-6 cursor-pointer">
+                    <button type="button" class="size-6 cursor-pointer lg:hidden">
                         <i class="font-icomoon icon-bars text-2xl icon-colors"></i>
                     </button>
 
                     <NuxtLink to="/">
                         <Paye1Logo size="w-[72px] sm:w-[90px] h-8 sm:h-10" degree="fill-primary-700 dark:fill-primary-600" text="fill-gray-900 dark:fill-gray-50" />
                     </NuxtLink>
+
+                    <!-- search in desktop -->
+                    <div class="h-12 border_gray_200 rounded-lg"></div>
                 </div>
 
                 <div class="flex items-center lg:order-2 gap-1">
@@ -31,17 +39,18 @@
 
                     </button>
 
-                    <NuxtLink to="/price"
-                              class="hidden lg:flex py-2 px-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    <NuxtLink to="/price" class="hidden lg:flex text-sm font-medium label_gray_700 ml-4">
                         قیمت روز خودرو
                     </NuxtLink>
-                    <NuxtLink to="/add"
-                              class="hidden text-white bg-blue-700 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-200">
-                        ثبت آگهی
-                    </NuxtLink>
-
                     <!-- profile -->
                     <Profile />
+                    <NuxtLink to="/add" class="hidden h-12 px-5 lg:flex items-center gap-2 text-white text-base hover_bg_primary_750 font-medium bg_primary_700 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>
+                        <span> ثبت آگهی </span>
+                    </NuxtLink>
+
                 </div>
             </div>
         </section>

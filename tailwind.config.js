@@ -14,6 +14,14 @@ export default {
             center: true,
             padding: '1rem',
         },
+        screens: {
+            'xs': '475px',
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1024px',
+            'xl': '1280px',
+            // ...defaultTheme.screens,
+        },
         extend: {
             fontFamily: {
                 sans: "IRANSansX, serif",
@@ -41,13 +49,10 @@ export default {
                     500:   'rgb(var(--theme-primary-500), <alpha-value>)',
                     600:   'rgb(var(--theme-primary-600), <alpha-value>)',
                     700:   'rgb(var(--theme-primary-700), <alpha-value>)',
+                    750:   'rgb(var(--theme-primary-750), <alpha-value>)',
                     800:   'rgb(var(--theme-primary-800), <alpha-value>)',
                     900:   'rgb(var(--theme-primary-900), <alpha-value>)',
                 },
-            },
-            screens: {
-                'xs': '475px',
-                ...defaultTheme.screens,
             },
         },
     },
