@@ -2,7 +2,7 @@
     <section class="font-sans number-fa bg_background_content">
         <Header />
 
-        <section class="min_h_screen pt-4 pb-16">
+        <section class="min_h_screen pt-4 pb-20 sm:pb-24 lg:pb-0">
             <slot />
         </section>
 

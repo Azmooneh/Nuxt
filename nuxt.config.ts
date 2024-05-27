@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     modules: [
         '@pinia/nuxt',
         'nuxt-swiper',
-        // '@nuxt/image',
+        '@nuxt/image',
     ],
 
     srcDir: "./",

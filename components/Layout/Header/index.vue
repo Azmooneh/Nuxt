@@ -1,6 +1,6 @@
 <template>
     <header
-        class="sticky top-0 z-[1]" id="main-header">
+        class="sticky top-0 z-[2]" id="main-header">
         <section class="hidden lg:block">
             <a href="#" class="w-full h-16">
                 <img src="https://paye1.com/storage/media/land/files/jbHblglNPKeE2uMVXO2E1Ad8WcZWDVMt1eY84B70.png" class="w-full h-full" />

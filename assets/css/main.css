@@ -141,10 +141,12 @@
     .hover_bg_white{
         @apply hover:bg-white dark:hover:bg-gray-900;
     }
+    .hover_bg_gray_50{
+        @apply hover:bg-gray-50 dark:hover:bg-gray-800;
+    }
     /* background colors ends */
 
     /* label colors starts */
-
     .label_primary_600{
         @apply text-primary-600 dark:text-primary-400;
     }
@@ -156,6 +158,9 @@
     }
     .hover_label_primary_750{
         @apply hover:text-primary-750 dark:hover:hover:text-primary-500;
+    }
+    .label_primary_600{
+        @apply text-primary-600 dark:text-primary-400;
     }
     .icon_primary_700{
         @apply text-primary-700 dark:text-primary-500;

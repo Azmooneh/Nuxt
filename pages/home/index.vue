@@ -16,7 +16,7 @@
         <Advertises />
 
         <!-- articles in desktop -->
-
+        <Articles />
     </section>
 </template>
 
@@ -24,12 +24,14 @@
 import {useHomePage} from "~/store/index.js";
 import Advertises from "~/components/Home/Advertises/index.vue";
 import Categories from "~/components/Home/Categories/index.vue";
+import Articles from "~/components/Home/Articles/index.vue";
 
 export default {
     name: "Home Page",
     components: {
         Advertises,
         Categories,
+        Articles,
     },
     setup() {
         const homePageStore = useHomePage();

@@ -1,5 +1,5 @@
 <template>
-    <section class="lg:mb-24" id="advertises_list">
+    <section class="lg:pb-24" id="advertises_list">
         <!-- header in desktop -->
         <div class="hidden lg:flex items-end justify-between container mb-4">
             <h4 class="text-3xl font-black label_gray_900"> به روزترین آگهی ها </h4>
@@ -9,9 +9,9 @@
             </NuxtLink>
         </div>
         <!-- advertises -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 relative container mb-10">
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 relative container">
             <NuxtLink v-for="(ad, index) in advertises" :key="index" :to="'/advertises/' + ad.id"
-                      class="flex hover:bg-gray-50 dark:hover:bg-gray-800 border border-gray-200 bg-white rounded-lg overflow-hidden dark:bg-gray-900 dark:border-gray-700">
+                      class="flex hover_bg_gray_50 border border-gray-200 hover_bg_white rounded-lg overflow-hidden dark:border-gray-700">
                 <!-- image -->
                 <div class="w-36 sm:w-40 lg:w-48 xl:w-52 flex-none">
                     <div class="relative w-full pt-[100%]">
@@ -57,7 +57,7 @@
 
             <!-- toggle load more items -->
             <div v-if="!isLastLoaded"
-                class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent lg:via-white lg:to-white to-white dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 sm:*:w-40 lg:*:w-56 *:h-8 sm:*:h-10 lg:*:h-12 *:font-medium *:text-sm lg:*:text-base *:text-white *:bg-blue-500 *:rounded">
+                class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent lg:via-white lg:to-white to-white dark:to-gray-900 dark:via-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 sm:*:w-40 lg:*:w-56 *:h-8 sm:*:h-10 lg:*:h-12 *:font-medium *:text-sm lg:*:text-base *:text-white *:bg_primary_700 *:hover_bg_primary_750 *:rounded">
                 <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"> بیشتر</button>
                 <button v-else @click.prevent="burnCheckScrollPosition" type="button"> توقف</button>
             </div>
@@ -78,8 +78,6 @@ export default {
         const advertises = ref(computed(() => homePageStore.advertises));
         const pagination = ref(computed(() => homePageStore.advertisePagination));
         const advertisesList = ref(null);
-        // const mainHeader = ref(null);
-        // const mainCategories = ref(null);
         const loadMoreStatus = ref(false);
         const isLastLoaded = ref(advertises.value.length >= pagination.value.total);
         const scrollDebounce = ref(null);
@@ -93,8 +91,6 @@ export default {
                 }
             })
             advertisesList.value = document.getElementById('advertises_list');
-            // mainHeader.value = document.getElementById('main-header');
-            // mainCategories.value = document.getElementById('home-categories');
         })
 
         // get next page data on scroll to end.
