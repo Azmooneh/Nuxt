@@ -46,6 +46,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bookmark-outline:before {
+    content: "\e90e";
+}
+.icon-calendar-edit-outline:before {
+    content: "\e90f";
+}
+.icon-folder-outline:before {
+    content: "\e910";
+}
+.icon-search-outline:before {
+    content: "\e911";
+}
 .icon-instagram:before {
     content: "\e90b";
 }

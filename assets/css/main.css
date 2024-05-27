@@ -80,13 +80,13 @@
         url('../fonts/woff2/IRANSansX-Medium.woff2') format('woff2');
     }
 
-    /* @font-face {
+    @font-face {
         font-family: IRANSansX;
         font-style: normal;
         font-weight: 600;
         src: url('../fonts/woff/IRANSansX-DemiBold.woff') format('woff'),
         url('../fonts/woff2/IRANSansX-DemiBold.woff2') format('woff2');
-    } */
+    }
 
     /*@font-face {*/
     /*    font-family: IRANSansX;*/
@@ -173,6 +173,9 @@
     }
     .label_gray_500{
         @apply text-gray-500 dark:text-gray-50;
+    }
+    .hover_label_gray_600{
+        @apply hover:text-gray-600 dark:hover:text-white;
     }
     .icon-colors{
         @apply text-gray-700 dark:text-gray-50;
