@@ -180,6 +180,7 @@
     }
     /* label colors ends */
 
+    /* border colors starts */
     .border_gray_200{
         @apply border-gray-200 dark:border-gray-500;
     }
@@ -189,6 +190,7 @@
     .hover_border_primary_400{
         @apply hover:border-primary-400 dark:hover:border-primary-600;
     }
+    /* border colors ends */
     /*custom color components ends */
 }
 

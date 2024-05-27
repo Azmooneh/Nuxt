@@ -1,5 +1,5 @@
 <template>
-    <section id="advertises_list">
+    <section class="lg:mb-24" id="advertises_list">
         <!-- header in desktop -->
         <div class="hidden lg:flex items-end justify-between container mb-4">
             <h4 class="text-3xl font-black label_gray_900"> به روزترین آگهی ها </h4>
@@ -57,7 +57,7 @@
 
             <!-- toggle load more items -->
             <div v-if="!isLastLoaded"
-                class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent to-white dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 *:h-8 *:font-medium *:text-sm *:text-white *:bg-blue-500 *:rounded">
+                class="flex justify-center items-center w-full h-12 bg-gradient-to-b from-transparent lg:via-white lg:to-white to-white dark:to-gray-900 absolute -bottom-2 inset-x-0 z-[1] *:flex_center *:w-20 sm:*:w-40 lg:*:w-56 *:h-8 sm:*:h-10 lg:*:h-12 *:font-medium *:text-sm lg:*:text-base *:text-white *:bg-blue-500 *:rounded">
                 <button v-if="!loadMoreStatus" @click.prevent="registerCheckScrollPosition" type="button"> بیشتر</button>
                 <button v-else @click.prevent="burnCheckScrollPosition" type="button"> توقف</button>
             </div>

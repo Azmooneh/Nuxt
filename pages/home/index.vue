@@ -12,7 +12,11 @@
         <!-- categories -->
         <Categories />
 
+        <!-- advertise -->
         <Advertises />
+
+        <!-- articles in desktop -->
+
     </section>
 </template>
 
