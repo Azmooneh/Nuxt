@@ -17,7 +17,7 @@
                     </NuxtLink>
 
                     <!-- search in desktop -->
-                    <div class="h-12 border_gray_200 rounded-lg"></div>
+                    <DesktopSearchAndState />
                 </div>
 
                 <div class="flex items-center lg:order-2 gap-1">
@@ -45,6 +45,7 @@ import { useCommon } from '~/store/index.js';
 import Paye1Logo from "assets/icons/website/paye1.vue";
 import Profile from "~/components/Layout/Header/children/Profile/index.vue";
 import MobileMenu from "~/components/Layout/Header/children/MobileMenu/index.vue";
+import DesktopSearchAndState from "~/components/Layout/Header/children/DesktopSearchAndState/index.vue";
 
 export default {
     name: 'Header',
@@ -52,6 +53,7 @@ export default {
         Paye1Logo,
         Profile,
         MobileMenu,
+        DesktopSearchAndState,
     },
     setup() {
         const commonStore = useCommon();

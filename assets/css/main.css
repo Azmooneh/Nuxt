@@ -181,8 +181,14 @@
     .label_gray_300{
         @apply text-gray-300 dark:text-gray-50;
     }
+    .label_gray_400{
+        @apply text-gray-400 dark:text-gray-50;
+    }
     .label_gray_500{
         @apply text-gray-500 dark:text-gray-50;
+    }
+    .icon_gray_500{
+        @apply text-gray-500 dark:text-gray-200;
     }
     .hover_label_gray_600{
         @apply hover:text-gray-600 dark:hover:text-white;
