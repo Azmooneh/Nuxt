@@ -41,11 +41,7 @@
 
             <section class="flex items-center h-full gap-20 xl:gap-40">
                 <!-- social media -->
-                <div class="flex items-center gap-6">
-                    <a href="#" class="font-icomoon icon-linkedin text-xl"></a>
-                    <a href="#" class="font-icomoon icon-instagram text-xl"></a>
-                    <a href="#" class="font-icomoon icon-twitter text-xl"></a>
-                </div>
+                <SocialMedia />
                 <!-- enamads -->
                 <div class="flex items-center gap-4">
                     <a href="#" class="size-9 rounded-lg bg-white flex_center">
@@ -64,7 +60,12 @@
 </template>
 
 <script>
+import SocialMedia from "~/components/Layout/Footer/Children/SocialMedia/index.vue";
+
 export default {
     name: 'Layout Footer',
+    components: {
+        SocialMedia,
+    }
 }
 </script>

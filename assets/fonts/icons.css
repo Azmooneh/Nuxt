@@ -46,6 +46,21 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-user:before {
+    content: "\e915";
+}
+.icon-x-outline:before {
+    content: "\e914";
+}
+.icon-chevron-right:before {
+    content: "\e906";
+}
+.icon-grid-outline:before {
+    content: "\e912";
+}
+.icon-search-outline1:before {
+    content: "\e913";
+}
 .icon-bookmark-outline:before {
     content: "\e90e";
 }
@@ -90,9 +105,6 @@
 }
 .icon-store-outline:before {
     content: "\e905";
-}
-.icon-chevron-down-outline:before {
-    content: "\e906";
 }
 .icon-user-outline:before {
     content: "\e907";

@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="flex justify-between items-center gap-2">
-                            <div class="flex items-center gap-2 icon_gray_500">
+                            <div class="flex items-center gap-2 label_gray_500">
                                 <i class="font-icomoon icon-store-outline text-xl lg:text-2xl lg:leading-5 leading-4"></i>
                                 <p class="hidden xs:box text-xs font-normal line-clamp-1"> نمایشگاه </p>
                             </div>

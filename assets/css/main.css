@@ -34,6 +34,10 @@
     *, .font-icomoon {
         @apply transition-all duration-150 delay-0 ease-in;
     }
+
+    input{
+        @apply focus:ring-0 outline-none
+    }
 }
 
 @tailwind components;
@@ -132,6 +136,9 @@
     .bg_gray_900{
         @apply bg-gray-900 dark:bg-gray-800;
     }
+    .bg_primary_50{
+        @apply bg-primary-50 dark:bg-primary-700/25;
+    }
     .bg_primary_100{
         @apply bg-primary-100 dark:bg-gray-700;
     }
@@ -171,6 +178,9 @@
     .icon_primary_700{
         @apply text-primary-700 dark:text-primary-500;
     }
+    .label_gray_300{
+        @apply text-gray-300 dark:text-gray-50;
+    }
     .label_gray_500{
         @apply text-gray-500 dark:text-gray-50;
     }
@@ -179,9 +189,6 @@
     }
     .icon-colors{
         @apply text-gray-700 dark:text-gray-50;
-    }
-    .icon_gray_500{
-        @apply text-gray-500 dark:text-gray-50;
     }
     .label_gray_600{
         @apply text-gray-600 dark:text-gray-200;

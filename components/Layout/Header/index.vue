@@ -2,7 +2,7 @@
     <header
         class="sticky top-0 z-[2]" id="main-header">
         <section class="hidden lg:block">
-            <a href="#" class="w-full h-16">
+            <a href="#" class="w-full h-16 block">
                 <img src="https://paye1.com/storage/media/land/files/jbHblglNPKeE2uMVXO2E1Ad8WcZWDVMt1eY84B70.png" class="w-full h-full" />
             </a>
         </section>
@@ -10,9 +10,7 @@
             <div class="container flex justify-between items-center h-full">
                 <div class="flex items-center gap-4 lg:gap-2.5">
                     <!-- hamburger menu -->
-                    <button type="button" class="size-6 cursor-pointer lg:hidden">
-                        <i class="font-icomoon icon-bars text-2xl icon-colors"></i>
-                    </button>
+                    <MobileMenu />
 
                     <NuxtLink to="/">
                         <Paye1Logo size="w-[72px] sm:w-[90px] h-8 sm:h-10" degree="fill-primary-700 dark:fill-primary-600" text="fill-gray-900 dark:fill-gray-50" />
@@ -46,12 +44,14 @@
 import { useCommon } from '~/store/index.js';
 import Paye1Logo from "assets/icons/website/paye1.vue";
 import Profile from "~/components/Layout/Header/children/Profile/index.vue";
+import MobileMenu from "~/components/Layout/Header/children/MobileMenu/index.vue";
 
 export default {
     name: 'Header',
     components: {
         Paye1Logo,
         Profile,
+        MobileMenu,
     },
     setup() {
         const commonStore = useCommon();

@@ -3,7 +3,7 @@
         <Popover as="div" v-slot="{ open }" class="relative lg:ml-2">
             <PopoverButton
                 class="flex_center cursor-pointer size-8 lg:size-12 border_primary_600 border rounded-full lg:rounded-lg lg:hover_bg_white focus-visible:outline-none outline-none">
-                <i class="font-icomoon icon-user-outline text-2xl leading-6 label_primary_700"></i>
+                <i class="font-icomoon icon-user text-2xl leading-6 label_primary_700"></i>
             </PopoverButton>
             <!-- layer -->
             <transition enter-active-class="transition duration-200 ease-out"
@@ -78,7 +78,7 @@
 </template>
 
 <script>
-import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue'
+import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
 import {useCommon} from "~/store/index.js";
 
 export default {
