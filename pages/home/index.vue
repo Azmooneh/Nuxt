@@ -10,13 +10,13 @@
     <section v-else
              class="scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white dark:scrollbar-thumb-gray-800 dark:scrollbar-track-gray-900">
         <!-- categories -->
-        <Categories />
+<!--        <Categories />-->
 
         <!-- advertise -->
         <Advertises />
 
         <!-- articles in desktop -->
-        <Articles />
+<!--        <Articles />-->
     </section>
 </template>
 

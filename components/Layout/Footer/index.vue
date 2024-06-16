@@ -1,5 +1,5 @@
 <template>
-    <footer class="fixed bottom-0 inset-x-0 bg_background_footer lg:bg_gray_900 z-[1] lg:static">
+    <footer class="fixed bottom-0 inset-x-0 bg_gray_50 lg:bg_gray_900 z-[1] lg:static">
         <div class="h-16 w-full grid grid-cols-5 text-gray-800 dark:text-gray-50 xs:max-w-md xs:mx-auto lg:hidden">
             <NuxtLink to="/" class="flex_center flex-col gap-2 h-full">
                 <i class="font-icomoon icon-search text-xl leading-6"></i>

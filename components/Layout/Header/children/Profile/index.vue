@@ -12,7 +12,7 @@
                         leave-active-class="transition duration-150 ease-in delay-200"
                         leave-from-class="opacity-100"
                         leave-to-class="opacity-0">
-                <PopoverOverlay v-if="open" class="fixed lg:hidden inset-x-0 bottom-0 top-12 bg-gray-900/70"/>
+                <PopoverOverlay v-if="open" class="fixed lg:hidden inset-x-0 bottom-0 top-12 bg-gray-900/70 cursor-default"/>
             </transition>
             <!-- content -->
             <transition enter-active-class="transition-all duration-200 ease-out delay-200 lg:delay-0"
@@ -37,17 +37,17 @@
                                     <i class="font-icomoon icon-bookmark-outline text-base leading-5"></i>
                                     <span class="text-sm font-normal"> سنجاق شده ها </span>
                                 </NuxtLink>
-                                <NuxtLink to="/" class="flex items-center gap-2 hover_bg_gray_50">
-                                    <i class="font-icomoon icon-search-outline text-base leading-5"></i>
-                                    <span class="text-sm font-normal"> جستجو های اخیر </span>
-                                </NuxtLink>
-                                <NuxtLink to="/" class="flex items-center gap-2 hover_bg_gray_50">
-                                    <i class="font-icomoon icon-folder-outline text-base leading-5"></i>
-                                    <span class="text-sm font-normal"> بازدید های اخیر </span>
-                                </NuxtLink>
+<!--                                <NuxtLink to="/" class="flex items-center gap-2 hover_bg_gray_50">-->
+<!--                                    <i class="font-icomoon icon-search-outline text-base leading-5"></i>-->
+<!--                                    <span class="text-sm font-normal"> جستجو های اخیر </span>-->
+<!--                                </NuxtLink>-->
+<!--                                <NuxtLink to="/" class="flex items-center gap-2 hover_bg_gray_50">-->
+<!--                                    <i class="font-icomoon icon-folder-outline text-base leading-5"></i>-->
+<!--                                    <span class="text-sm font-normal"> بازدید های اخیر </span>-->
+<!--                                </NuxtLink>-->
                                 <NuxtLink to="/" class="flex items-center gap-2 hover_bg_gray_50">
                                     <i class="font-icomoon icon-calendar-edit-outline text-base leading-5"></i>
-                                    <span class="text-sm font-normal"> یادداشت ها </span>
+                                    <span class="text-sm font-normal"> آگهی های من </span>
                                 </NuxtLink>
                                 <div class="flex items-center gap-2 hover_bg_gray_50 cursor-pointer">
                                     <span class="text-sm font-normal"> خروج </span>
@@ -67,7 +67,7 @@
                                 <!-- sun -->
                                 <i class="font-icomoon icon-sun-outline text-lg label_primary_700"></i>
                                 <!-- moon -->
-                                <i class="font-icomoon icon-moon text-base label_primary_700"></i>
+                                <i class="font-icomoon icon-moon-outline text-base label_primary_700"></i>
                             </div>
                         </div>
                     </div>

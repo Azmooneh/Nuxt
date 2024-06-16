@@ -3,7 +3,7 @@
         <!-- header in desktop -->
         <div class="hidden lg:flex items-end justify-between container mb-4">
             <h4 class="text-3xl font-black label_gray_900"> به روزترین آگهی ها </h4>
-            <NuxtLink to="/" class="flex items-center gap-2 label_primary_700 hover_label_primary_750">
+            <NuxtLink to="/advertises" class="flex items-center gap-2 label_primary_700 hover_label_primary_750">
                 <span> همه آگهی ها </span>
                 <i class="font-icomoon icon-arrow-left-outline text-2xl"></i>
             </NuxtLink>

@@ -35,8 +35,8 @@
         @apply transition-all duration-150 delay-0 ease-in;
     }
 
-    input{
-        @apply focus:ring-0 outline-none
+    input[type='text']{
+        @apply focus:ring-0 outline-none bg-transparent;
     }
 }
 
@@ -100,13 +100,13 @@
     /*    url('../fonts/woff2/IRANSansX-Bold.woff2') format('woff2');*/
     /*}*/
 
-    /*@font-face {*/
-    /*    font-family: IRANSansX;*/
-    /*    font-style: normal;*/
-    /*    font-weight: 800;*/
-    /*    src: url('../fonts/woff/IRANSansX-ExtraBold.woff') format('woff'),*/
-    /*    url('../fonts/woff2/IRANSansX-ExtraBold.woff2') format('woff2');*/
-    /*}*/
+    @font-face {
+        font-family: IRANSansX;
+        font-style: normal;
+        font-weight: 800;
+        src: url('../fonts/woff/IRANSansX-ExtraBold.woff') format('woff'),
+        url('../fonts/woff2/IRANSansX-ExtraBold.woff2') format('woff2');
+    }
 
     @font-face {
         font-family: IRANSansX;
@@ -122,12 +122,16 @@
         @apply flex items-center justify-center;
     }
 
+    .flex_between{
+        @apply flex items-center justify-between;
+    }
+
     /*custom color components starts */
     /* background colors starts */
     .bg_background_header{
         @apply bg-gray-100 dark:bg-gray-800;
     }
-    .bg_background_footer{
+    .bg_gray_50{
         @apply bg-gray-50 dark:bg-gray-700;
     }
     .bg_background_content{
@@ -150,6 +154,9 @@
     }
     .hover_bg_white{
         @apply hover:bg-white dark:hover:bg-gray-900;
+    }
+    .hover_bg_white_2{
+        @apply hover:bg-white dark:hover:bg-gray-600;
     }
     .hover_bg_gray_50{
         @apply hover:bg-gray-50 dark:hover:bg-gray-800;

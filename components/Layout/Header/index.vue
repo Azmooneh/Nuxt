@@ -1,11 +1,7 @@
 <template>
     <header
         class="sticky top-0 z-[2]" id="main-header">
-        <section class="hidden lg:block">
-            <a href="#" class="w-full h-16 block">
-                <img src="https://paye1.com/storage/media/land/files/jbHblglNPKeE2uMVXO2E1Ad8WcZWDVMt1eY84B70.png" class="w-full h-full" />
-            </a>
-        </section>
+        <Advertise />
         <section class="border-b border-b-gray-200 dark:border-b-gray-700 bg_background_header h-12 sm:h-16 lg:h-20">
             <div class="container flex justify-between items-center h-full">
                 <div class="flex items-center gap-4 lg:gap-2.5">
@@ -46,6 +42,7 @@ import Paye1Logo from "assets/icons/website/paye1.vue";
 import Profile from "~/components/Layout/Header/children/Profile/index.vue";
 import MobileMenu from "~/components/Layout/Header/children/MobileMenu/index.vue";
 import DesktopSearchAndState from "~/components/Layout/Header/children/DesktopSearchAndState/index.vue";
+import Advertise from "~/components/Layout/Header/children/Advertise/index.vue";
 
 export default {
     name: 'Header',
@@ -54,6 +51,7 @@ export default {
         Profile,
         MobileMenu,
         DesktopSearchAndState,
+        Advertise,
     },
     setup() {
         const commonStore = useCommon();

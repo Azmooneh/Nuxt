@@ -1,7 +1,7 @@
 <template>
     <client-only>
-        <Popover as="div" v-slot="{ open }" class="relative">
-            <PopoverButton class="size-6 cursor-pointer lg:hidden focus-visible:outline-none outline-none">
+        <Popover as="div" v-slot="{ open }" class="relative lg:hidden">
+            <PopoverButton class="size-6 cursor-pointer focus-visible:outline-none outline-none">
                 <i class="font-icomoon icon-bars text-2xl icon-colors"></i>
             </PopoverButton>
             <!-- layer -->
@@ -30,11 +30,12 @@
                                 <i class="font-icomoon icon-grid-outline text-base leading-5"></i>
                                 <span class="text-sm font-normal"> دسته بندی </span>
                             </NuxtLink>
-                            <NuxtLink to="/" class="py-2 px-4 hover_bg_gray_50 block"> پشتیبانی </NuxtLink>
-                            <SelectState />
+                            <Search />
+<!--                            <NuxtLink to="/" class="py-2 px-4 hover_bg_gray_50 block"> پشتیبانی </NuxtLink>-->
+                            <!-- <SelectState /> -->
                             <NuxtLink to="/" class="py-2 px-4 hover_bg_gray_50 block"> پرسش های شما </NuxtLink>
                             <NuxtLink to="/" class="py-2 px-4 hover_bg_gray_50 block"> درباره ما </NuxtLink>
-                            <NuxtLink to="/" class="py-2 px-4 hover_bg_gray_50 block"> تماس با ما </NuxtLink>
+<!--                            <NuxtLink to="/" class="py-2 px-4 hover_bg_gray_50 block"> تماس با ما </NuxtLink>-->
                         </section>
 
                         <!-- social media -->
@@ -49,8 +50,9 @@
 
 <script>
 import {Popover, PopoverButton, PopoverPanel} from '@headlessui/vue';
-import SelectState from "~/components/Layout/Header/children/MobileMenu/Children/SelectState/index.vue";
+// import SelectState from "~/components/Layout/Header/children/MobileMenu/Children/SelectState/index.vue";
 import SocialMedia from "~/components/Layout/Footer/Children/SocialMedia/index.vue";
+import Search from "~/components/Layout/Header/children/MobileMenu/Children/Search/index.vue";
 
 export default {
     name: 'Header Mobile Menu',
@@ -58,8 +60,9 @@ export default {
         Popover,
         PopoverButton,
         PopoverPanel,
-        SelectState,
+        // SelectState,
         SocialMedia,
+        Search,
     },
     setup() {
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-12 border_gray_200 rounded-lg w-[26rem] xl:w-[30rem] hidden shrink lg:flex items-center border border_gray_200 px-4 bg_background_footer">
+    <div class="h-12 border_gray_200 rounded-lg w-[26rem] xl:w-[30rem] hidden shrink lg:flex items-center border border_gray_200 px-4 bg_gray_50">
         <!-- search -->
         <Search />
         <!-- location -->
