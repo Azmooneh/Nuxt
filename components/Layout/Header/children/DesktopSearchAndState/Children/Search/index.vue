@@ -9,7 +9,7 @@
             <PopoverOverlay class="fixed hidden lg:block inset-0 z-[1] bg-gray-900/70 cursor-default" v-if="open" />
 
             <PopoverPanel class="fixed top-0 inset-x-0 z-[2] cursor-default">
-                <Advertise />
+<!--                <Advertise />-->
 
                 <section class="bg_background_header h-12 sm:h-16 lg:h-20">
                     <section class="container flex gap-2.5 items-center h-full">

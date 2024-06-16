@@ -1,6 +1,6 @@
 <template>
     <main class="size-full lg:h-screen flex_center">
-        <PhoneStep />
+        <PhoneStep v-if="loginStep == 1" />
     </main>
 </template>
 
@@ -18,6 +18,11 @@ export default {
             layout: 'landing',
         });
         const loginStore = useProfileLogin();
+        const loginStep = ref(computed(() => loginStore.step));
+
+        return {
+            loginStep,
+        }
     }
 }
 </script>

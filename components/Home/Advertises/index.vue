@@ -27,24 +27,24 @@
                             <p class="label_primary_600 text-xs lg:text-sm lg:leading-4 font-medium line-clamp-1"> {{ ad.province }} </p>
                             <p class="label_gray_500 text-xs font-normal line-clamp-1"> {{ getHoursPast(ad.published_date) }} </p>
                         </div>
-                        <h2 class="line-clamp-2 tracking-wide label_gray_600 text-sm lg:text-base lg:leading-7 leading-6 font-normal">
+                        <h2 class="line-clamp-2 label_gray_600 text-sm lg:text-base lg:leading-7 leading-6 font-normal">
                             {{ ad.brand }} &nbsp; {{ ad.model }} &nbsp; {{ ad.title }}
                         </h2>
                     </div>
                     <!-- price & tags -->
                     <div class="flex flex-col gap-2">
                             <!-- tags -->
-                        <div class="grid overflow-auto scrollbar-none">
-                            <div class="flex items-center gap-2 text-xs font-medium *:label_primary_600 *:h-5 lg:*:h-6 lg:*:text-sm lg:*:leading-4 *:flex-none *:px-2 *:rounded-md *:bg_primary_100 *:flex *:items-center">
-                                <p class=""> معاوضه </p>
-                                <p class=""> فوری </p>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center gap-2">
-                            <div class="flex items-center gap-2 label_gray_500">
-                                <i class="font-icomoon icon-store-outline text-xl lg:text-2xl lg:leading-5 leading-4"></i>
-                                <p class="hidden xs:box text-xs font-normal line-clamp-1"> نمایشگاه </p>
-                            </div>
+<!--                        <div class="grid overflow-auto scrollbar-none">-->
+<!--                            <div class="flex items-center gap-2 text-xs font-medium *:label_primary_600 *:h-5 lg:*:h-6 lg:*:text-sm lg:*:leading-4 *:flex-none *:px-2 *:rounded-md *:bg_primary_100 *:flex *:items-center">-->
+<!--                                <p class=""> معاوضه </p>-->
+<!--                                <p class=""> فوری </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="flex justify-end items-center gap-2">
+<!--                            <div class="flex items-center gap-2 label_gray_500">-->
+<!--                                <i class="font-icomoon icon-store-outline text-xl lg:text-2xl lg:leading-5 leading-4"></i>-->
+<!--                                <p class="hidden xs:box text-xs font-normal line-clamp-1"> نمایشگاه </p>-->
+<!--                            </div>-->
                             <div
                                 class="text-xs xs:text-sm lg:text-base inline-flex items-center font-medium label_primary_600 flex-none">
                                 <p v-if="ad.agreement == 0"> {{ numberWithCommas(ad.price) }} <span class="text-xs sm:text-sm xl:text-base"> تومان </span> </p>

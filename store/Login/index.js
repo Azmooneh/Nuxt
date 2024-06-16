@@ -4,6 +4,7 @@ export const useProfileLogin = defineStore('ProfileLogin', {
     state: () => {
         return {
             step: 1,
+            phoneNumber: null,
         }
     },
     actions: {
