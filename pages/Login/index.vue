@@ -6,6 +6,7 @@
 
 <script>
 import PhoneStep from "~/components/Login/PhoneStep/index.vue";
+import {useProfileLogin} from "~/store/Login";
 
 export default {
     name: "Login",
@@ -16,6 +17,7 @@ export default {
         definePageMeta({
             layout: 'landing',
         });
+        const loginStore = useProfileLogin();
     }
 }
 </script>

@@ -103,7 +103,7 @@ export default {
                 haveHigherElements.value.map(item => {
                     higherElementsHeight += document.getElementById(item).offsetHeight;
                 })
-                console.log(higherElementsHeight);
+                // console.log(higherElementsHeight);
                 if ((scrollY + innerHeight) - 32 - higherElementsHeight >= advertisesList.value.offsetHeight) {
                     if(pagination.value.currentPage < pagination.value.totalPages){
                         let currentPagination = ref(pagination.value.currentPage);

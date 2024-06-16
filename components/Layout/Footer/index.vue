@@ -31,12 +31,12 @@
 
         <div class="hidden label_primary_50 lg:flex items-center justify-between h-16 container">
             <section class="flex items-center h-full gap-8 xl:gap-12 text-sm font-normal">
-                <NuxtLink to="/" class=""> آگهی ها </NuxtLink>
-                <NuxtLink to="/" class=""> دست اول ها </NuxtLink>
-                <NuxtLink to="/" class=""> مجله خودرو </NuxtLink>
-                <NuxtLink to="/" class=""> پرسش های شما </NuxtLink>
-                <NuxtLink to="/" class=""> تماس با ما </NuxtLink>
-                <NuxtLink to="/" class=""> درباره ما </NuxtLink>
+                <NuxtLink to="/advertises" class=""> آگهی ها </NuxtLink>
+<!--                <NuxtLink to="/" class=""> دست اول ها </NuxtLink>-->
+<!--                <NuxtLink to="/" class=""> مجله خودرو </NuxtLink>-->
+<!--                <NuxtLink to="/" class=""> پرسش های شما </NuxtLink>-->
+                <NuxtLink to="/contact" class=""> تماس با ما </NuxtLink>
+                <NuxtLink to="/about" class=""> درباره ما </NuxtLink>
             </section>
 
             <section class="flex items-center h-full gap-20 xl:gap-40">
